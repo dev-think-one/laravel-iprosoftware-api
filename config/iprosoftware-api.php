@@ -9,7 +9,7 @@ return [
     'requests_path_prefix' => env('IPROSOFTWARE_REQUESTS_PATH_PREFIX', 'apis/'),
 
     'access_token_class' => \Angecode\IproSoftware\AccessToken\AccessToken::class,
-    'access_token_cacher' => \Angecode\LaravelIproSoft\LaravelCacheAccessTokenCacher::class,
+    'access_token_cacher' => \Angecode\LaravelIproSoft\AccessToken\LaravelCacheAccessTokenCacher::class,
 
     'default_client_conf' => [
         'timeout' => 15.0,
