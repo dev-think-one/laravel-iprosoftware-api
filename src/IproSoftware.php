@@ -6,7 +6,6 @@ use Angecode\IproSoftware\IproSoftwareClient;
 
 class IproSoftware extends IproSoftwareClient
 {
-
     /**
      * IproSoftware constructor.
      * @throws \Angecode\IproSoftware\Exceptions\IproSoftwareApiException
@@ -27,8 +26,8 @@ class IproSoftware extends IproSoftwareClient
                 'http_errors' => false,
                 'headers' => [
                     'Accept' => 'application/json',
-                ]
-            ]
+                ],
+            ],
         ]);
     }
 }
