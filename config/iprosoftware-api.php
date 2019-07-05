@@ -16,6 +16,6 @@ return [
         'http_errors' => false,
         'headers' => [
             'Accept' => 'application/json',
-        ]
-    ]
+        ],
+    ],
 ];

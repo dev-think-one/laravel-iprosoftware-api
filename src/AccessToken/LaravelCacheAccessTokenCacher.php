@@ -2,14 +2,13 @@
 
 namespace Angecode\LaravelIproSoft\AccessToken;
 
-use Angecode\IproSoftware\Contracts\AccessToken;
-use Angecode\IproSoftware\Contracts\AccessTokenCacher;
-use Illuminate\Contracts\Cache\Repository as Cache;
 use Psr\SimpleCache\InvalidArgumentException;
+use Angecode\IproSoftware\Contracts\AccessToken;
+use Illuminate\Contracts\Cache\Repository as Cache;
+use Angecode\IproSoftware\Contracts\AccessTokenCacher;
 
 class LaravelCacheAccessTokenCacher implements AccessTokenCacher
 {
-
     /** @var string */
     protected $key;
 
@@ -26,7 +25,6 @@ class LaravelCacheAccessTokenCacher implements AccessTokenCacher
         $this->key = $key;
         $this->cache = $cache;
     }
-
 
     /**
      * Store an item in the cache.
