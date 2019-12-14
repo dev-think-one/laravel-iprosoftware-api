@@ -2,8 +2,8 @@
 
 namespace Angecode\LaravelIproSoft\Tests;
 
-use Angecode\LaravelIproSoft\IproSoftware;
 use Angecode\IproSoftware\IproSoftwareClient;
+use Angecode\LaravelIproSoft\IproSoftware;
 
 class IproSoftwareTest extends IproSoftwareTestCase
 {
