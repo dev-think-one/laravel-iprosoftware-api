@@ -19,7 +19,6 @@
     ],
     "require": {
         "php": "^7.2",
-        "illuminate/contracts": "^5.8|^6.0",
         "yaroslawww/ipro-software-api-php": "^0.1.1"
     },
     "require-dev": {

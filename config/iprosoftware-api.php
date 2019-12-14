@@ -12,7 +12,7 @@ return [
     'access_token_cacher' => \Angecode\LaravelIproSoft\AccessToken\LaravelCacheAccessTokenCacher::class,
 
     'default_client_conf' => [
-        'timeout' => 15.0,
+        'timeout' => 100.0,
         'http_errors' => false,
         'headers' => [
             'Accept' => 'application/json',
