@@ -2,9 +2,9 @@
 
 namespace Angecode\LaravelIproSoft\Tests;
 
-use Mockery;
-use Illuminate\Contracts\Cache\Repository as Cache;
 use Angecode\LaravelIproSoft\AccessToken\LaravelCacheAccessTokenCacher;
+use Illuminate\Contracts\Cache\Repository as Cache;
+use Mockery;
 
 class LaravelCacheAccessTokenCacherTest extends IproSoftwareTestCase
 {
