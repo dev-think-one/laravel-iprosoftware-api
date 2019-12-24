@@ -4,6 +4,7 @@
 namespace Angecode\LaravelIproSoft\Responses;
 
 use Angecode\LaravelIproSoft\Requests\PaginatedRequestDTO;
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
 use Psr\Http\Message\ResponseInterface;
@@ -35,5 +36,10 @@ class ResponseCollection
     public function hasNextIndex(): bool
     {
         return $this->total > $this->requestData->index * $this->requestData->size;
+    }
+
+    public static function mock(string $cast): self
+    {
+        return new ResponseCollection(new PaginatedRequestDTO(), new Response(200, [], json_encode(['TotalHits'=>0, 'Items'=>[]])), $cast);
     }
 }
