@@ -1,0 +1,59 @@
+{
+    "name": "yaroslawww/laravel-iprosoftware-api",
+    "description": "Laravel wrapper for IproSoftware Api",
+    "keywords": [
+        "php",
+        "laravel",
+        "iprosoftware",
+        "ipro-software"
+    ],
+    "homepage": "https://github.com/yaroslawww/laravel-iprosoftware-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yaroslav Georgitsa",
+            "email": "yaroslav.georgitsa@gmail.com",
+            "role": "Developer",
+            "homepage": "https://github.com/yaroslawww"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "yaroslawww/ipro-software-api-php": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.15",
+        "mockery/mockery": "^1.0",
+        "php-mock/php-mock": "^2.1",
+        "php-mock/php-mock-phpunit": "^2.4",
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Angecode\\LaravelIproSoft\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Angecode\\LaravelIproSoft\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Angecode\\LaravelIproSoft\\IproSoftwareProvider"
+            ],
+            "aliases": {
+                "IproSoftware": "Angecode\\LaravelIproSoft\\IproSoftwareFacade"
+            }
+        }
+    }
+}
