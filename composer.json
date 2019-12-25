@@ -26,6 +26,7 @@
         "php": "^7.2",
         "illuminate/support": "^6.0|^5.8",
         "spatie/data-transfer-object": "^1.12",
+        "spatie/enum": "^2.3",
         "yaroslawww/ipro-software-api-php": "^1.0"
     },
     "require-dev": {

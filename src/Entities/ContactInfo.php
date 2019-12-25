@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Entities;
 
 class ContactInfo extends IproEntity
