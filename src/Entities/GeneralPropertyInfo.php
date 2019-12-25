@@ -21,7 +21,7 @@ class GeneralPropertyInfo extends IproEntity
     public $reference;
 
     /** @var null|int */
-    public $ReferenceValue;
+    public $referenceValue;
 
     /** @var null|string */
     public $description;
@@ -116,8 +116,19 @@ class GeneralPropertyInfo extends IproEntity
     /** @var array */
     public $listingIcons;
 
-    public function parseOwner(array  $data)
+    public function parseOwner(array $data)
     {
         return OwnerInfo::fromArray($data);
+    }
+
+    public function extractSlugFromUrl(): ?string
+    {
+        preg_match('/([^\/]+)\/?$/', $this->url, $matches);
+        if (isset($matches[1])) {
+            return $matches[1];
+        }
+
+        preg_match('/([^\/]+)\/?$/', $this->propertyWebsite, $matches);
+        return $matches[1] ?? null;
     }
 }

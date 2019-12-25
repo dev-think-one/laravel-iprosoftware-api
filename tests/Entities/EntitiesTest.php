@@ -1,9 +1,10 @@
 <?php
 
-namespace Angecode\LaravelIproSoft\Tests;
+namespace Angecode\LaravelIproSoft\Tests\Entities;
 
 use Angecode\LaravelIproSoft\Entities\GeneralPropertyInfo;
 use Angecode\LaravelIproSoft\Entities\OwnerInfo;
+use Angecode\LaravelIproSoft\Tests\IproSoftwareTestCase;
 
 class EntitiesTest extends IproSoftwareTestCase
 {
