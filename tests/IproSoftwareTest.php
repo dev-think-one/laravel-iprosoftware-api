@@ -9,10 +9,15 @@ class IproSoftwareTest extends IproSoftwareTestCase
 {
     use \phpmock\phpunit\PHPMock;
 
-    public function test_constructor()
+    /**
+     * @test
+     * @throws \Angecode\IproSoftware\Exceptions\IproSoftwareApiException
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     */
+    public function constructor()
     {
         $time = $this->getFunctionMock('Angecode\\LaravelIproSoft\\', 'config');
-        $time->expects($this->atMost(7))->willReturn('');
+        $time->expects($this->atMost(8))->willReturn('');
         $time = $this->getFunctionMock('Angecode\\LaravelIproSoft\\', 'resolve');
         $time->expects($this->once())->willReturn('');
 

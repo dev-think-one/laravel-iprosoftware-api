@@ -8,7 +8,11 @@ use Mockery;
 
 class LaravelCacheAccessTokenCacherTest extends IproSoftwareTestCase
 {
-    public function test_flow()
+    /**
+     * @test
+     * @throws \Psr\SimpleCache\InvalidArgumentException
+     */
+    public function flow()
     {
         $cache = Mockery::mock(Cache::class);
         $accessToken = new \Angecode\IproSoftware\AccessToken\AccessToken(uniqid(), uniqid(), uniqid());

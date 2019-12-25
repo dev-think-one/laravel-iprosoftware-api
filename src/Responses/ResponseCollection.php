@@ -14,7 +14,7 @@ class ResponseCollection
     /** @var PaginatedRequestDTO */
     public $requestData;
 
-    /** @var int  */
+    /** @var int */
     public $total = 0;
 
     /** @var Collection */
@@ -38,8 +38,8 @@ class ResponseCollection
         return $this->total > $this->requestData->index * $this->requestData->size;
     }
 
-    public static function mock(string $cast): self
+    public static function mock(string $cast, array $data = ['TotalHits' => 0, 'Items' => []], array $dtoData = []): self
     {
-        return new ResponseCollection(new PaginatedRequestDTO(), new Response(200, [], json_encode(['TotalHits'=>0, 'Items'=>[]])), $cast);
+        return new static(new PaginatedRequestDTO($dtoData), new Response(200, [], json_encode($data)), $cast);
     }
 }

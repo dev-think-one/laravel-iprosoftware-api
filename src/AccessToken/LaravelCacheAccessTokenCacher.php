@@ -49,7 +49,7 @@ class LaravelCacheAccessTokenCacher implements AccessTokenCacher
      */
     public function get(): ?AccessToken
     {
-        $token = unserialize($this->cache->get($this->key), ['allowed_classes' => [AccessToken::class]]);
+        $token = unserialize($this->cache->get($this->key));
 
         return ($token instanceof AccessToken) ? $token : null;
     }
