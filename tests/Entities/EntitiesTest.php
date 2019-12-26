@@ -28,6 +28,7 @@ class EntitiesTest extends IproSoftwareTestCase
         $this->assertArrayHasKey('NotExistProperty', $property->owner->notParsedData);
 
         $this->assertEquals(111, $property->id);
+        $this->assertEquals(111, $property->getIproId());
         $this->assertEquals(1000, $property->owner->contactId);
     }
 }

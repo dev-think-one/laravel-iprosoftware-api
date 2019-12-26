@@ -31,4 +31,9 @@ abstract class IproEntity
 
         return $object;
     }
+
+    public function getIproId(): ?int
+    {
+        return $this->id ? ((int)$this->id) : null;
+    }
 }
