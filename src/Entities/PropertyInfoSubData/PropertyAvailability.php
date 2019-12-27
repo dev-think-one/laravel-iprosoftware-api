@@ -30,7 +30,7 @@ class PropertyAvailability extends IproEntity
      */
     public function getStartAt(): ?Carbon
     {
-        if (! $this->startDate) {
+        if (!((bool)$this->startDate)) {
             return null;
         }
 
@@ -42,14 +42,14 @@ class PropertyAvailability extends IproEntity
      */
     public function getEndAt(): ?Carbon
     {
-        if (! $this->endDate) {
+        if (!((bool)$this->endDate)) {
             return null;
         }
 
         return $this->createCarbonInstanceFromDateString($this->endDate);
     }
 
-    protected function createCarbonInstanceFromDateString(string $dateString) : Carbon
+    protected function createCarbonInstanceFromDateString(string $dateString): Carbon
     {
         return Carbon::createFromFormat('Y-m-d', $dateString)->startOfDay();
     }

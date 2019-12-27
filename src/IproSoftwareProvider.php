@@ -27,7 +27,7 @@ class IproSoftwareProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/iprosoftware-api.php', 'iprosoftware-api');
 
-        $this->app->bind('iprosoftware', function ($app) {
+        $this->app->bind('iprosoftware', function () {
             return new IproSoftware();
         });
     }
