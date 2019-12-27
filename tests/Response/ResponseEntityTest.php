@@ -4,12 +4,8 @@ namespace Angecode\LaravelIproSoft\Tests\Response;
 
 use Angecode\LaravelIproSoft\Entities\ContactInfo;
 use Angecode\LaravelIproSoft\Entities\IproEntity;
-use Angecode\LaravelIproSoft\Requests\PaginatedRequestDTO;
-use Angecode\LaravelIproSoft\Responses\ResponseCollection;
 use Angecode\LaravelIproSoft\Responses\ResponseEntity;
 use Angecode\LaravelIproSoft\Tests\IproSoftwareTestCase;
-use GuzzleHttp\Psr7\Response;
-use Illuminate\Support\LazyCollection;
 
 class ResponseEntityTest extends IproSoftwareTestCase
 {

@@ -3,7 +3,6 @@
 namespace Angecode\LaravelIproSoft\Tests\Entities;
 
 use Angecode\LaravelIproSoft\Entities\GeneralPropertyInfo;
-use Angecode\LaravelIproSoft\Entities\OwnerInfo;
 use Angecode\LaravelIproSoft\Tests\IproSoftwareTestCase;
 
 class GeneralPropertyInfoTest extends IproSoftwareTestCase
@@ -21,6 +20,7 @@ class GeneralPropertyInfoTest extends IproSoftwareTestCase
 
         $this->assertEquals('blah-lodge', $property->extractSlugFromUrl());
     }
+
     /**
      * @test
      */

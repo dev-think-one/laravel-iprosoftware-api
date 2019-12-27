@@ -2,8 +2,10 @@
 
 namespace Angecode\LaravelIproSoft\Tests\Entities;
 
+use Angecode\LaravelIproSoft\Entities\AllPropertyInfo;
 use Angecode\LaravelIproSoft\Entities\GeneralPropertyInfo;
 use Angecode\LaravelIproSoft\Entities\OwnerInfo;
+use Angecode\LaravelIproSoft\Entities\PropertyInfoSubData\PropertyDetails;
 use Angecode\LaravelIproSoft\Tests\IproSoftwareTestCase;
 
 class EntitiesTest extends IproSoftwareTestCase
@@ -30,5 +32,24 @@ class EntitiesTest extends IproSoftwareTestCase
         $this->assertEquals(111, $property->id);
         $this->assertEquals(111, $property->getIproId());
         $this->assertEquals(1000, $property->owner->contactId);
+    }
+
+    /**
+     * @test
+     */
+    public function propertyNameIsChangeable(): void
+    {
+        /** @var AllPropertyInfo $property */
+        $property = AllPropertyInfo::fromArray([
+            'PropertyDetails' => [
+                'SEOTitle' => 'test',
+            ]
+        ]);
+
+        $this->assertInstanceOf(AllPropertyInfo::class, $property);
+        $this->assertInstanceOf(PropertyDetails::class, $property->propertyDetails);
+
+        $this->assertArrayNotHasKey('SEOTitle', $property->propertyDetails->notParsedData);
+        $this->assertEquals('test', $property->propertyDetails->seoTitle);
     }
 }

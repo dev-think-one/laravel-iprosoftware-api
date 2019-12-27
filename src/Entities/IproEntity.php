@@ -15,11 +15,16 @@ abstract class IproEntity
     {
         $object = new static();
         foreach ($array as $key => $value) {
-            if (property_exists($object, Str::camel($key))) {
+            $key = preg_replace('/[^A-Za-z0-9]/', '', $key);
+            $propertyName = (property_exists($object, Str::camel($key))) ? Str::camel($key) : null;
+            if (!$propertyName && method_exists($object, 'propName' . $key)) {
+                $propertyName = $object->{'propName' . $key}();
+            }
+            if ($propertyName) {
                 if (method_exists($object, 'parse' . $key)) {
                     $value = $object->{'parse' . $key}($value);
                 }
-                $object->{Str::camel($key)} = $value;
+                $object->$propertyName = $value;
                 unset($array[$key]);
             }
         }
