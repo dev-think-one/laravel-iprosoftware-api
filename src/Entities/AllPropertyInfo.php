@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Entities;
 
 use Angecode\LaravelIproSoft\Entities\PropertyInfoSubData\PropertyAvailability;

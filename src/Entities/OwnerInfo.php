@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Entities;
 
 class OwnerInfo extends IproEntity
@@ -59,6 +58,6 @@ class OwnerInfo extends IproEntity
     /** @var null|string */
     public $bankPaymentReference;
 
-    /** @var boolean */
+    /** @var bool */
     public $bankNonResident;
 }

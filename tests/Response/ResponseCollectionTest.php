@@ -15,10 +15,10 @@ class ResponseCollectionTest extends IproSoftwareTestCase
             'TotalHits' => 3,
             'Items' => [
                 [
-                    'Id' => 1
+                    'Id' => 1,
                 ],
                 [
-                    'Id' => 2
+                    'Id' => 2,
                 ],
             ],
         ];
@@ -33,7 +33,7 @@ class ResponseCollectionTest extends IproSoftwareTestCase
             ContactInfo::class,
             $this->mockData(),
             [
-                'size' => 2
+                'size' => 2,
             ]
         );
 

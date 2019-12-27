@@ -15,7 +15,7 @@ class GeneralPropertyInfoTest extends IproSoftwareTestCase
         /** @var GeneralPropertyInfo $property */
         $property = GeneralPropertyInfo::fromArray([
             'Id' => 111,
-            'url' => 'http://guest.test.com/blah-lodge/'
+            'url' => 'http://guest.test.com/blah-lodge/',
         ]);
 
         $this->assertEquals('blah-lodge', $property->extractSlugFromUrl());
@@ -29,7 +29,7 @@ class GeneralPropertyInfoTest extends IproSoftwareTestCase
         /** @var GeneralPropertyInfo $property */
         $property = GeneralPropertyInfo::fromArray([
             'Id' => 111,
-            'propertyWebsite' => 'http://guest.test.com/blah-lodge2/'
+            'propertyWebsite' => 'http://guest.test.com/blah-lodge2/',
         ]);
 
         $this->assertEquals('blah-lodge2', $property->extractSlugFromUrl());

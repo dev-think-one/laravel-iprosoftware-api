@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Entities;
 
 class GeneralPropertyInfo extends IproEntity
@@ -32,7 +31,7 @@ class GeneralPropertyInfo extends IproEntity
     /** @var null|string */
     public $image;
 
-    /** @var boolean */
+    /** @var bool */
     public $inActive;
 
     /** @var null|string */
@@ -62,7 +61,7 @@ class GeneralPropertyInfo extends IproEntity
     /** @var null|string */
     public $propertyType;
 
-    /** @var boolean */
+    /** @var bool */
     public $wifi;
 
     /** @var null|string */
@@ -83,22 +82,22 @@ class GeneralPropertyInfo extends IproEntity
     /** @var null|OwnerInfo */
     public $owner;
 
-    /** @var boolean */
+    /** @var bool */
     public $isAvailable;
 
-    /** @var boolean */
+    /** @var bool */
     public $isBrokenRule;
 
     /** @var null|string */
     public $availabilityMessage;
 
-    /** @var boolean */
+    /** @var bool */
     public $ratesIncludeVat;
 
-    /** @var boolean */
+    /** @var bool */
     public $suspended;
 
-    /** @var boolean */
+    /** @var bool */
     public $withdrawn;
 
     /** @var null|float */
@@ -129,6 +128,7 @@ class GeneralPropertyInfo extends IproEntity
         }
 
         preg_match('/([^\/]+)\/?$/', $this->propertyWebsite, $matches);
+
         return $matches[1] ?? null;
     }
 }
