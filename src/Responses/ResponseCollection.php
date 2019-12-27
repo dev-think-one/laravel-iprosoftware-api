@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Responses;
 
 use Angecode\LaravelIproSoft\Requests\PaginatedRequestDTO;
@@ -24,7 +23,7 @@ class ResponseCollection
     {
         $this->requestData = $requestData;
 
-        $responseData = json_decode((string)$response->getBody(), true);
+        $responseData = json_decode((string) $response->getBody(), true);
         $this->total = $responseData['TotalHits'];
         $this->items = new LazyCollection(function () use ($responseData, $cast) {
             foreach ($responseData['Items'] as $item) {

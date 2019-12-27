@@ -43,7 +43,7 @@ class EntitiesTest extends IproSoftwareTestCase
         $property = AllPropertyInfo::fromArray([
             'PropertyDetails' => [
                 'SEOTitle' => 'test',
-            ]
+            ],
         ]);
 
         $this->assertInstanceOf(AllPropertyInfo::class, $property);

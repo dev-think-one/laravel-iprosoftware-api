@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Tests\Entities;
 
 use Angecode\LaravelIproSoft\Entities\PropertyInfoSubData\PropertyAvailability;
@@ -9,7 +8,6 @@ use Carbon\Carbon;
 
 class PropertyAvailabilityTest extends IproSoftwareTestCase
 {
-
     /**
      * @test
      */

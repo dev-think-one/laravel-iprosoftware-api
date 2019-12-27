@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Tests\Entities;
 
 use Angecode\LaravelIproSoft\Entities\PropertyInfoSubData\PropertyImage;
@@ -9,7 +8,6 @@ use Carbon\Carbon;
 
 class PropertyImageTest extends IproSoftwareTestCase
 {
-
     /**
      * @test
      */

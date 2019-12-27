@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft;
 
 use Carbon\Carbon;

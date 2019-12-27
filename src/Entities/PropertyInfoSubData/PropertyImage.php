@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Entities\PropertyInfoSubData;
 
 use Angecode\LaravelIproSoft\Entities\IproEntity;
@@ -21,7 +20,7 @@ class PropertyImage extends IproEntity
     public $hostUrl;
 
     /**
-     * Format:  "20/01/2016 06:08:25"
+     * Format:  "20/01/2016 06:08:25".
      * @var null|string
      */
     public $modifiedDate;
@@ -31,7 +30,7 @@ class PropertyImage extends IproEntity
      */
     public function getModifiedAt(): ?Carbon
     {
-        if (!$this->modifiedDate) {
+        if (! $this->modifiedDate) {
             return null;
         }
 

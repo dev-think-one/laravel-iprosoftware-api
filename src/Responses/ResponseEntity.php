@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Responses;
 
 use Angecode\LaravelIproSoft\Entities\IproEntity;
@@ -13,7 +12,7 @@ class ResponseEntity
     /** @var PaginatedRequestDTO */
     public $requestData;
 
-    /** @var int  */
+    /** @var int */
     public $total = 0;
 
     /** @var IproEntity */
@@ -23,7 +22,7 @@ class ResponseEntity
     {
         $this->requestData = $requestData;
 
-        $responseData = json_decode((string)$response->getBody(), true);
+        $responseData = json_decode((string) $response->getBody(), true);
         $this->entity = $cast::fromArray($responseData);
     }
 

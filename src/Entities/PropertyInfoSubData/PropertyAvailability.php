@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Entities\PropertyInfoSubData;
 
 use Angecode\LaravelIproSoft\Entities\IproEntity;
@@ -9,13 +8,13 @@ use Carbon\Carbon;
 class PropertyAvailability extends IproEntity
 {
     /**
-     * Format: "2019-12-26"
+     * Format: "2019-12-26".
      * @var null|string
      */
     public $startDate;
 
     /**
-     * Format: "2019-12-26"
+     * Format: "2019-12-26".
      * @var null|string
      */
     public $endDate;
@@ -31,7 +30,7 @@ class PropertyAvailability extends IproEntity
      */
     public function getStartAt(): ?Carbon
     {
-        if (!$this->startDate) {
+        if (! $this->startDate) {
             return null;
         }
 
@@ -43,7 +42,7 @@ class PropertyAvailability extends IproEntity
      */
     public function getEndAt(): ?Carbon
     {
-        if (!$this->endDate) {
+        if (! $this->endDate) {
             return null;
         }
 

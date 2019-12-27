@@ -12,7 +12,7 @@ class ResponseEntityTest extends IproSoftwareTestCase
     protected function mockData(): array
     {
         return [
-            'Id' => 1
+            'Id' => 1,
         ];
     }
 
@@ -25,7 +25,7 @@ class ResponseEntityTest extends IproSoftwareTestCase
             ContactInfo::class,
             $this->mockData(),
             [
-                'size' => 2
+                'size' => 2,
             ]
         );
 

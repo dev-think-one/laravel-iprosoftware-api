@@ -1,13 +1,11 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Requests;
 
 use Spatie\DataTransferObject\DataTransferObject;
 
 class PaginatedRequestDTO extends DataTransferObject
 {
-
     /** @var int */
     public $size = 20;
 
