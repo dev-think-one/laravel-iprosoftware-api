@@ -6,7 +6,7 @@ build:
     tests-with-coverage:
       environment:
         php:
-          version: 7.2
+          version: 7.3
       tests:
         override:
           - command: vendor/bin/phpunit --coverage-clover=coverage-file
