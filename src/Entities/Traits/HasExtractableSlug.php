@@ -6,13 +6,22 @@ trait HasExtractableSlug
 {
     public function extractSlugFromUrl(): ?string
     {
-        preg_match('/([^\/]+)\/?$/', $this->url, $matches);
-        if (isset($matches[1])) {
-            return $matches[1];
+        if (method_exists($this, 'slugProperties')) {
+            $slugProperties = $this->slugProperties();
+        } else {
+            $slugProperties = [
+                'url',
+                'propertyWebsite'
+            ];
         }
 
-        preg_match('/([^\/]+)\/?$/', $this->propertyWebsite, $matches);
+        foreach ($slugProperties as $propName) {
+            preg_match('/([^\/]+)\/?$/', $this->$propName, $matches);
+            if (isset($matches[1])) {
+                return $matches[1];
+            }
+        }
 
-        return $matches[1] ?? null;
+        return null;
     }
 }

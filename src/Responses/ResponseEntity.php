@@ -20,7 +20,7 @@ class ResponseEntity
         $this->entity = $cast::fromArray($responseData);
     }
 
-    public static function mock(string $cast, array $data = [], array $dtoData = []): self
+    public static function mock(string $cast, array $data = []): self
     {
         return new static(new Response(200, [], json_encode($data)), $cast);
     }
