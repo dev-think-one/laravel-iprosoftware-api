@@ -159,9 +159,13 @@ class PropertyDetails extends IproEntity
      * @param array $data
      * @return IproEntity
      */
-    public function parseAttributes(array $data): IproEntity
+    public function parseAttributes(?array $data): IproEntity
     {
-        return PropertyAttributes::fromArray($data);
+        if ($data) {
+            return PropertyAttributes::fromArray($data);
+        }
+
+        return null;
     }
 
     /**
