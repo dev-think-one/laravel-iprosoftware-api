@@ -6,8 +6,9 @@ trait HasExtractableSlug
 {
     public function extractSlugFromUrl(): ?string
     {
-        if (method_exists($this, 'slugProperties')) {
-            $slugProperties = $this->slugProperties();
+        $methodName = 'slugProperties';
+        if (method_exists($this, $methodName)) {
+            $slugProperties = $this->{$methodName}();
         } else {
             $slugProperties = [
                 'url',
