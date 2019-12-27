@@ -5,7 +5,7 @@ namespace Angecode\LaravelIproSoft\Entities;
 use Angecode\LaravelIproSoft\Entities\PropertyInfoSubData\PropertyAvailability;
 use Angecode\LaravelIproSoft\Entities\PropertyInfoSubData\PropertyDetails;
 use Angecode\LaravelIproSoft\Entities\PropertyInfoSubData\PropertyImage;
-use phpDocumentor\Reflection\Types\Collection;
+use Illuminate\Support\Collection;
 
 class AllPropertyInfo extends IproEntity
 {

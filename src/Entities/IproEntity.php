@@ -15,7 +15,7 @@ abstract class IproEntity
         foreach ($array as $key => $value) {
             $key = preg_replace('/[^A-Za-z0-9]/', '', $key);
             $propertyName = (property_exists($object, Str::camel($key))) ? Str::camel($key) : null;
-            if (! $propertyName && method_exists($object, 'propName'.$key)) {
+            if ($propertyName === null && method_exists($object, 'propName'.$key)) {
                 $propertyName = $object->{'propName'.$key}();
             }
             if ($propertyName) {
@@ -36,6 +36,11 @@ abstract class IproEntity
 
     public function getIproId(): ?int
     {
-        return $this->id ? ((int) $this->id) : null;
+        return $this->{$this->getIproIdKeyName()} ? ((int) $this->{$this->getIproIdKeyName()}) : null;
+    }
+
+    public function getIproIdKeyName(): string
+    {
+        return 'id';
     }
 }
