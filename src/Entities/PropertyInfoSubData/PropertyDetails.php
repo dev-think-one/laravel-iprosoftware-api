@@ -3,10 +3,13 @@
 namespace Angecode\LaravelIproSoft\Entities\PropertyInfoSubData;
 
 use Angecode\LaravelIproSoft\Entities\IproEntity;
+use Angecode\LaravelIproSoft\Entities\Traits\HasExtractableSlug;
 use Illuminate\Support\Collection;
 
 class PropertyDetails extends IproEntity
 {
+    use HasExtractableSlug;
+
     /** @var int */
     public $id;
 

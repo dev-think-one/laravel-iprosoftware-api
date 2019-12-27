@@ -2,8 +2,12 @@
 
 namespace Angecode\LaravelIproSoft\Entities;
 
+use Angecode\LaravelIproSoft\Entities\Traits\HasExtractableSlug;
+
 class GeneralPropertyInfo extends IproEntity
 {
+    use HasExtractableSlug;
+
     /** @var int */
     public $id;
 
@@ -118,17 +122,5 @@ class GeneralPropertyInfo extends IproEntity
     public function parseOwner(array $data)
     {
         return OwnerInfo::fromArray($data);
-    }
-
-    public function extractSlugFromUrl(): ?string
-    {
-        preg_match('/([^\/]+)\/?$/', $this->url, $matches);
-        if (isset($matches[1])) {
-            return $matches[1];
-        }
-
-        preg_match('/([^\/]+)\/?$/', $this->propertyWebsite, $matches);
-
-        return $matches[1] ?? null;
     }
 }
