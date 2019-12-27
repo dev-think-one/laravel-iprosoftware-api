@@ -18,7 +18,7 @@ class GeneralPropertyInfoTest extends IproSoftwareTestCase
             'url' => 'http://guest.test.com/blah-lodge/',
         ]);
 
-        $this->assertEquals('blah-lodge', $property->extractSlugFromUrl());
+        $this->assertEquals('blah-lodge', $property->extractSlug());
     }
 
     /**
@@ -32,6 +32,6 @@ class GeneralPropertyInfoTest extends IproSoftwareTestCase
             'propertyWebsite' => 'http://guest.test.com/blah-lodge2/',
         ]);
 
-        $this->assertEquals('blah-lodge2', $property->extractSlugFromUrl());
+        $this->assertEquals('blah-lodge2', $property->extractSlug());
     }
 }

@@ -4,7 +4,7 @@ namespace Angecode\LaravelIproSoft\Entities\Traits;
 
 trait HasExtractableSlug
 {
-    public function extractSlugFromUrl(): ?string
+    public function extractSlug(): ?string
     {
         $methodName = 'slugProperties';
         if (method_exists($this, $methodName)) {
