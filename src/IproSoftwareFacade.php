@@ -34,6 +34,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static \Psr\Http\Message\ResponseInterface getPropertyAll($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Property-All
  * @method static \Psr\Http\Message\ResponseInterface getPropertyEnquiries($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Property-Enquiries
  * @method static \Psr\Http\Message\ResponseInterface getPropertyWelcomepack($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Property-Welcome-Pack
+ * @method static \Psr\Http\Message\ResponseInterface createOrUpdateProperty($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Push-Property
  * @method static \Psr\Http\Message\ResponseInterface createEnquiry($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Create-Enquiry
  * @method static \Psr\Http\Message\ResponseInterface searchBookings($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Bookings
  * @method static \Psr\Http\Message\ResponseInterface calculateBooking($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Calculate-Booking
