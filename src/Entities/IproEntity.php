@@ -50,4 +50,10 @@ abstract class IproEntity
     {
         return 'id';
     }
+
+    public function toArray()
+    {
+        // the "trick" is that get_object_vars is being called from the scope of call_user_func and not the scope of the object
+        return call_user_func('get_object_vars', $this);
+    }
 }
