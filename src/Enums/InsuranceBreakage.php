@@ -3,12 +3,10 @@
 
 namespace Angecode\LaravelIproSoft\Enums;
 
-
 use Spatie\Enum\Enum;
 
 class InsuranceBreakage extends Enum
 {
-
     public static function none(): InsuranceBreakage
     {
         return new class() extends InsuranceBreakage {
@@ -51,4 +49,3 @@ class InsuranceBreakage extends Enum
         };
     }
 }
-
