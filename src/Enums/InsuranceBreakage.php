@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Enums;
 
 use Spatie\Enum\Enum;
@@ -14,6 +13,7 @@ class InsuranceBreakage extends Enum
             {
                 return 'None';
             }
+
             public function getIndex(): int
             {
                 return 0;
@@ -28,6 +28,7 @@ class InsuranceBreakage extends Enum
             {
                 return 'Insurance';
             }
+
             public function getIndex(): int
             {
                 return 1;
@@ -42,6 +43,7 @@ class InsuranceBreakage extends Enum
             {
                 return 'BreakagesDeposit';
             }
+
             public function getIndex(): int
             {
                 return 2;

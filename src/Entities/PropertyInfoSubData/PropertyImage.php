@@ -30,7 +30,7 @@ class PropertyImage extends IproEntity
      */
     public function getModifiedAt(): ?Carbon
     {
-        if (!((bool)$this->modifiedDate)) {
+        if (! ((bool) $this->modifiedDate)) {
             return null;
         }
 

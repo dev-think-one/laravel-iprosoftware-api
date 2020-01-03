@@ -13,6 +13,7 @@ class BookingStatus extends Enum
             {
                 return 'Blockout';
             }
+
             public function getIndex(): int
             {
                 return 1;
@@ -27,6 +28,7 @@ class BookingStatus extends Enum
             {
                 return 'Provisional';
             }
+
             public function getIndex(): int
             {
                 return 2;
@@ -41,6 +43,7 @@ class BookingStatus extends Enum
             {
                 return 'Booking';
             }
+
             public function getIndex(): int
             {
                 return 3;
@@ -55,6 +58,7 @@ class BookingStatus extends Enum
             {
                 return 'Cancelled';
             }
+
             public function getIndex(): int
             {
                 return 4;
