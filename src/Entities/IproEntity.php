@@ -16,15 +16,15 @@ abstract class IproEntity
             $key = preg_replace('/[^A-Za-z0-9]/', '', $key);
             $propertyName = $object->getPropertyNameFromKey($key);
             if ($propertyName) {
-                if (method_exists($object, 'parse' . $key)) {
-                    $value = $object->{'parse' . $key}($value);
+                if (method_exists($object, 'parse'.$key)) {
+                    $value = $object->{'parse'.$key}($value);
                 }
                 $object->$propertyName = $value;
                 unset($array[$key]);
             }
         }
 
-        if (!empty($array)) {
+        if (! empty($array)) {
             $object->notParsedData = $array;
         }
 
@@ -34,8 +34,8 @@ abstract class IproEntity
     protected function getPropertyNameFromKey(string $key): ?string
     {
         $propertyName = (property_exists($this, Str::camel($key))) ? Str::camel($key) : null;
-        if ($propertyName === null && method_exists($this, 'propName' . $key)) {
-            $propertyName = $this->{'propName' . $key}();
+        if ($propertyName === null && method_exists($this, 'propName'.$key)) {
+            $propertyName = $this->{'propName'.$key}();
         }
 
         return $propertyName;
@@ -43,7 +43,7 @@ abstract class IproEntity
 
     public function getIproId(): ?int
     {
-        return $this->{$this->getIproIdKeyName()} ? ((int)$this->{$this->getIproIdKeyName()}) : null;
+        return $this->{$this->getIproIdKeyName()} ? ((int) $this->{$this->getIproIdKeyName()}) : null;
     }
 
     public function getIproIdKeyName(): string

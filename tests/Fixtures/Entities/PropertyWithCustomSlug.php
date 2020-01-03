@@ -14,7 +14,7 @@ class PropertyWithCustomSlug extends IproEntity
     public function slugProperties(): array
     {
         return [
-            'testUrl'
+            'testUrl',
         ];
     }
 }

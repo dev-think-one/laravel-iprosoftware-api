@@ -12,7 +12,7 @@ trait HasExtractableSlug
         } else {
             $slugProperties = [
                 'url',
-                'propertyWebsite'
+                'propertyWebsite',
             ];
         }
 

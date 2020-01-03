@@ -22,7 +22,7 @@ class HasSlugTest extends IproSoftwareTestCase
 
         /** @var PropertyWithCustomSlug $property */
         $property = PropertyWithCustomSlug::fromArray([
-            'TestUrl' => 'blah/testing-prop/'
+            'TestUrl' => 'blah/testing-prop/',
         ]);
 
         $this->assertEquals('testing-prop', $property->extractSlug());
