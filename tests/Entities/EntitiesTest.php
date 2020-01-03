@@ -37,7 +37,7 @@ class EntitiesTest extends IproSoftwareTestCase
     /**
      * @test
      */
-    public function propertyNameIsChangeable(): void
+    public function property_name_is_changeable(): void
     {
         /** @var AllPropertyInfo $property */
         $property = AllPropertyInfo::fromArray([
@@ -51,5 +51,20 @@ class EntitiesTest extends IproSoftwareTestCase
 
         $this->assertArrayNotHasKey('SEOTitle', $property->propertyDetails->notParsedData);
         $this->assertEquals('test', $property->propertyDetails->seoTitle);
+    }
+
+    /**
+     * @test
+     */
+    public function to_array_returns_array(): void
+    {
+        /** @var GeneralPropertyInfo $property */
+        $property = GeneralPropertyInfo::fromArray([
+            'Id' => 111,
+        ]);
+
+        $array = $property->toArray();
+
+        $this->assertArrayHasKey('id', $array);
     }
 }
