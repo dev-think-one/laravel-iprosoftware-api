@@ -6,7 +6,6 @@ use Angecode\LaravelIproSoft\Entities\IproEntity;
 
 class WelcomePack extends IproEntity
 {
-
     public ?string $wifiCode;
 
     public ?string $keySafeCode;
@@ -26,5 +25,4 @@ class WelcomePack extends IproEntity
     public ?string $rentalNotes;
 
     public ?string $internalRentalNotes;
-
 }
