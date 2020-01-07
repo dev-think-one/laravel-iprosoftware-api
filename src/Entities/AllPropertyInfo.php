@@ -9,32 +9,23 @@ use Illuminate\Support\Collection;
 
 class AllPropertyInfo extends IproEntity
 {
-    /** @var int */
-    public $propertyId;
+    public int $propertyId;
 
-    /** @var null|PropertyDetails */
-    public $propertyDetails;
+    public ?PropertyDetails $propertyDetails;
 
-    /** @var null|array */
-    public $propertyRates;
+    public ?array $propertyRates;
 
-    /** @var null|Collection */
-    public $propertyImages;
+    public ?Collection $propertyImages;
 
-    /** @var null|Collection */
-    public $propertyAvailabilities;
+    public ?Collection $propertyAvailabilities;
 
-    /** @var null|array */
-    public $propertyHolidayExtras;
+    public ?array $propertyHolidayExtras;
 
-    /** @var null|array */
-    public $propertyDiscounts;
+    public ?array $propertyDiscounts;
 
-    /** @var null|array */
-    public $propertyDistances;
+    public ?array $propertyDistances;
 
-    /** @var null|array */
-    public $propertyRooms;
+    public ?array $propertyRooms;
 
     /**
      * @codeCoverageIgnore
