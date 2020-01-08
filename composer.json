@@ -27,7 +27,7 @@
         "illuminate/support": "^6.0",
         "spatie/data-transfer-object": "^1.12",
         "spatie/enum": "^2.3",
-        "yaroslawww/ipro-software-api-php": "^1.0"
+        "yaroslawww/ipro-software-api-php": "^2.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
