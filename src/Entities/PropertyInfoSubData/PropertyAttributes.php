@@ -7,20 +7,23 @@ use Angecode\LaravelIproSoft\Entities\IproEntity;
 class PropertyAttributes extends IproEntity
 {
     /** @var null|string[] */
-    public $locations;
+    public ?array $locations;
 
     /** @var null|string[] */
-    public $suitableFor;
+    public ?array $suitableFor;
 
     /** @var null|string[] */
-    public $theme;
+    public ?array $theme;
 
     /** @var null|string[] */
-    public $bedrooms;
+    public ?array $bedrooms;
 
     /** @var null|string[] */
-    public $sleeps;
+    public ?array $sleeps;
 
     /** @var null|string[] */
-    public $features;
+    public ?array $features;
+
+    /** @var null|int[] */
+    public ?array $maxSleeps;
 }

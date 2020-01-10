@@ -13,6 +13,7 @@ abstract class IproEntity
     {
         $object = new static();
         foreach ($array as $key => $value) {
+            $originalKey = $key;
             $key = preg_replace('/[^A-Za-z0-9]/', '', $key);
             $propertyName = $object->getPropertyNameFromKey($key);
             if ($propertyName) {
@@ -20,7 +21,7 @@ abstract class IproEntity
                     $value = $object->{'parse'.$key}($value);
                 }
                 $object->$propertyName = $value;
-                unset($array[$key]);
+                unset($array[$originalKey]);
             }
         }
 
