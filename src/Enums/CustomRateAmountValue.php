@@ -17,8 +17,7 @@ class CustomRateAmountValue extends Enum
 
     public static function priceFrom(): CustomRateAmountValue
     {
-        return new class() extends CustomRateAmountValue
-        {
+        return new class() extends CustomRateAmountValue {
             public function getValue(): string
             {
                 return '1';
@@ -34,8 +33,7 @@ class CustomRateAmountValue extends Enum
 
     public static function usePreviousWeekPricing(): CustomRateAmountValue
     {
-        return new class() extends CustomRateAmountValue
-        {
+        return new class() extends CustomRateAmountValue {
             public function getValue(): string
             {
                 return '0';
@@ -51,8 +49,7 @@ class CustomRateAmountValue extends Enum
 
     public static function noPriceForThisWeek(): CustomRateAmountValue
     {
-        return new class() extends CustomRateAmountValue
-        {
+        return new class() extends CustomRateAmountValue {
             public function getValue(): string
             {
                 return '-1';
@@ -67,8 +64,7 @@ class CustomRateAmountValue extends Enum
 
     public static function hideColumnFromPricingGroup(): CustomRateAmountValue
     {
-        return new class() extends CustomRateAmountValue
-        {
+        return new class() extends CustomRateAmountValue {
             public function getValue(): string
             {
                 return '-2';
@@ -83,8 +79,7 @@ class CustomRateAmountValue extends Enum
 
     public static function firstSpecialOffer(): CustomRateAmountValue
     {
-        return new class() extends CustomRateAmountValue
-        {
+        return new class() extends CustomRateAmountValue {
             public function getValue(): string
             {
                 return '*';
@@ -100,8 +95,7 @@ class CustomRateAmountValue extends Enum
 
     public static function secondSpecialOffer(): CustomRateAmountValue
     {
-        return new class() extends CustomRateAmountValue
-        {
+        return new class() extends CustomRateAmountValue {
             public function getValue(): string
             {
                 return '**';
@@ -116,8 +110,7 @@ class CustomRateAmountValue extends Enum
 
     public static function thirdSpecialOffer(): CustomRateAmountValue
     {
-        return new class() extends CustomRateAmountValue
-        {
+        return new class() extends CustomRateAmountValue {
             public function getValue(): string
             {
                 return '***';

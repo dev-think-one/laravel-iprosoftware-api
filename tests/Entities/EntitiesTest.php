@@ -7,6 +7,7 @@ use Angecode\LaravelIproSoft\Entities\GeneralPropertyInfo;
 use Angecode\LaravelIproSoft\Entities\OwnerInfo;
 use Angecode\LaravelIproSoft\Entities\PropertyInfoSubData\PropertyDetails;
 use Angecode\LaravelIproSoft\Tests\IproSoftwareTestCase;
+use Illuminate\Support\Collection;
 
 class EntitiesTest extends IproSoftwareTestCase
 {
@@ -23,6 +24,42 @@ class EntitiesTest extends IproSoftwareTestCase
                 'NotExistProperty' => 'test',
             ],
         ]);
+        $this->assertInstanceOf(GeneralPropertyInfo::class, $property);
+
+        $this->assertInstanceOf(OwnerInfo::class, $property->owner);
+
+        $this->assertArrayHasKey('NotExistProperty', $property->owner->notParsedData);
+
+        $this->assertEquals(111, $property->id);
+        $this->assertEquals(111, $property->getIproId());
+        $this->assertEquals(1000, $property->owner->contactId);
+    }
+
+    /**
+     * @test
+     */
+    public function instance_from_list(): void
+    {
+        /** @var Collection $properties */
+        $properties = GeneralPropertyInfo::fromList([
+            [
+                'Id' => 111,
+                'Owner' => [
+                    'ContactId' => 1000,
+                    'NotExistProperty' => 'test',
+                ],
+            ],
+            [
+                'Id' => 222,
+                'Owner' => [
+                    'ContactId' => 2000,
+                    'NotExistProperty' => 'test2',
+                ],
+            ],
+        ]);
+
+        $property = $properties->first();
+
         $this->assertInstanceOf(GeneralPropertyInfo::class, $property);
 
         $this->assertInstanceOf(OwnerInfo::class, $property->owner);

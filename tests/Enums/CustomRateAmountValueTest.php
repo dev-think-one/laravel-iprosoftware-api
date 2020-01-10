@@ -17,4 +17,14 @@ class CustomRateAmountValueTest extends IproSoftwareTestCase
         $this->assertEquals('0', (string)$enum);
         $this->assertEquals(0, $enum->getIndex());
     }
+    /**
+     * @test
+     */
+    public function make_return_1_if_pass_positive_value(): void
+    {
+        $enum = CustomRateAmountValue::make(123456);
+
+        $this->assertEquals('1', (string)$enum);
+        $this->assertEquals(1, $enum->getIndex());
+    }
 }

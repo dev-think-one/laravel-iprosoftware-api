@@ -2,12 +2,28 @@
 
 namespace Angecode\LaravelIproSoft\Entities;
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
 abstract class IproEntity
 {
     /** @var array */
     public $notParsedData = [];
+
+    /**
+     * @param array $list
+     * @return Collection
+     */
+    public static function fromList(array $list): Collection
+    {
+        $collection = new Collection();
+
+        foreach ($list as $array) {
+            $collection->add(self::fromArray($array));
+        }
+
+        return $collection;
+    }
 
     public static function fromArray(array $array): self
     {
