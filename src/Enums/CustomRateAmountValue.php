@@ -2,6 +2,7 @@
 
 namespace Angecode\LaravelIproSoft\Enums;
 
+use Illuminate\Support\Str;
 use Spatie\Enum\Enum;
 use Spatie\Enum\Enumerable;
 
@@ -9,8 +10,12 @@ class CustomRateAmountValue extends Enum
 {
     public static function make($value): Enumerable
     {
+        $value = trim($value);
         if (is_numeric($value) && $value > 0) {
             $value = '1';
+        } elseif (!is_numeric($value) && Str::endsWith($value, ['*', '**', '***'])) {
+            preg_match('/^[^\*]+(?<offer>\**)$/', $value, $matches);
+            $value = $matches['offer'];
         }
         return parent::make($value);
     }

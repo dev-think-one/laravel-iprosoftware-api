@@ -25,7 +25,7 @@ class CustomRate extends IproEntity
     {
         $collection = new Collection();
         foreach ($data as $itemData) {
-            $collection->add(CustomRateAmount::fromArray($itemData));
+            $collection->add(CustomRateAmountGroup::fromArray($itemData));
         }
 
         return $collection;
