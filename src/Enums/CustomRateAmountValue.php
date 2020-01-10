@@ -23,6 +23,12 @@ class CustomRateAmountValue extends Enum
             {
                 return '1';
             }
+
+
+            public function getIndex(): int
+            {
+                return 1;
+            }
         };
     }
 
@@ -33,6 +39,12 @@ class CustomRateAmountValue extends Enum
             public function getValue(): string
             {
                 return '0';
+            }
+
+
+            public function getIndex(): int
+            {
+                return 0;
             }
         };
     }
@@ -45,6 +57,11 @@ class CustomRateAmountValue extends Enum
             {
                 return '-1';
             }
+
+            public function getIndex(): int
+            {
+                return -1;
+            }
         };
     }
 
@@ -55,6 +72,11 @@ class CustomRateAmountValue extends Enum
             public function getValue(): string
             {
                 return '-2';
+            }
+
+            public function getIndex(): int
+            {
+                return -2;
             }
         };
     }
@@ -67,6 +89,12 @@ class CustomRateAmountValue extends Enum
             {
                 return '*';
             }
+
+
+            public function getIndex(): int
+            {
+                return -3;
+            }
         };
     }
 
@@ -78,6 +106,11 @@ class CustomRateAmountValue extends Enum
             {
                 return '**';
             }
+
+            public function getIndex(): int
+            {
+                return -4;
+            }
         };
     }
 
@@ -88,6 +121,11 @@ class CustomRateAmountValue extends Enum
             public function getValue(): string
             {
                 return '***';
+            }
+
+            public function getIndex(): int
+            {
+                return -5;
             }
         };
     }
