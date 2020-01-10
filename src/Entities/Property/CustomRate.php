@@ -21,7 +21,7 @@ class CustomRate extends IproEntity
      * @param array $data
      * @return Collection
      */
-    public function parseWeekPriceList(array $data): Collection
+    protected function parseWeekPriceList(array $data): Collection
     {
         $collection = new Collection();
         foreach ($data as $itemData) {

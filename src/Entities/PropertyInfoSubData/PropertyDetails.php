@@ -159,7 +159,7 @@ class PropertyDetails extends IproEntity
      * @param array $data
      * @return IproEntity|null
      */
-    public function parseAttributes(?array $data): ?IproEntity
+    protected function parseAttributes(?array $data): ?IproEntity
     {
         if (is_array($data)) {
             return PropertyAttributes::fromArray($data);
@@ -173,7 +173,7 @@ class PropertyDetails extends IproEntity
      * @param array $data
      * @return Collection
      */
-    public function parseImages(array $data): Collection
+    protected function parseImages(array $data): Collection
     {
         return PropertyDetailImage::fromList($data);
     }
@@ -182,7 +182,7 @@ class PropertyDetails extends IproEntity
      * @codeCoverageIgnore
      * @return string
      */
-    public function propNameSEOTitle(): string
+    protected function propNameSEOTitle(): string
     {
         return 'seoTitle';
     }
@@ -191,7 +191,7 @@ class PropertyDetails extends IproEntity
      * @codeCoverageIgnore
      * @return string
      */
-    public function propNameSEOKeywords(): string
+    protected function propNameSEOKeywords(): string
     {
         return 'seoKeywords';
     }
@@ -200,7 +200,7 @@ class PropertyDetails extends IproEntity
      * @codeCoverageIgnore
      * @return string
      */
-    public function propNameSEODescription(): string
+    protected function propNameSEODescription(): string
     {
         return 'seoDescription';
     }

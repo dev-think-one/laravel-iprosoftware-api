@@ -32,7 +32,7 @@ class AllPropertyInfo extends IproEntity
      * @param array $data
      * @return Collection
      */
-    public function parsePropertyAvailabilities(array $data): Collection
+    protected function parsePropertyAvailabilities(array $data): Collection
     {
         return PropertyAvailability::fromList($data);
     }
@@ -42,7 +42,7 @@ class AllPropertyInfo extends IproEntity
      * @param array $data
      * @return Collection
      */
-    public function parsePropertyImages(array $data): Collection
+    protected function parsePropertyImages(array $data): Collection
     {
         return PropertyImage::fromList($data);
     }
@@ -52,7 +52,7 @@ class AllPropertyInfo extends IproEntity
      * @param array $data
      * @return IproEntity
      */
-    public function parsePropertyDetails(array $data)
+    protected function parsePropertyDetails(array $data): IproEntity
     {
         return PropertyDetails::fromArray($data);
     }

@@ -119,7 +119,7 @@ class GeneralPropertyInfo extends IproEntity
     /** @var array */
     public $listingIcons;
 
-    public function parseOwner(array $data)
+    protected function parseOwner(array $data)
     {
         return OwnerInfo::fromArray($data);
     }

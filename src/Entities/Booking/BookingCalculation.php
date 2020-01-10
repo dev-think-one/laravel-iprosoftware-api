@@ -27,7 +27,7 @@ class BookingCalculation extends IproEntity
      * @codeCoverageIgnore
      * @return string
      */
-    public function propNameVATRate(): string
+    protected function propNameVATRate(): string
     {
         return 'vatRate';
     }
@@ -37,7 +37,7 @@ class BookingCalculation extends IproEntity
      * @param null|array $data
      * @return Collection
      */
-    public function parsePropertyItems(?array $data): Collection
+    protected function parsePropertyItems(?array $data): Collection
     {
         return PropertyItem::fromList($data);
     }
