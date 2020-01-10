@@ -34,12 +34,7 @@ class AllPropertyInfo extends IproEntity
      */
     public function parsePropertyAvailabilities(array $data): Collection
     {
-        $availabilities = [];
-        foreach ($data as $itemData) {
-            $availabilities[] = PropertyAvailability::fromArray($itemData);
-        }
-
-        return collect($availabilities);
+        return PropertyAvailability::fromList($data);
     }
 
     /**
@@ -49,12 +44,7 @@ class AllPropertyInfo extends IproEntity
      */
     public function parsePropertyImages(array $data): Collection
     {
-        $images = [];
-        foreach ($data as $imageData) {
-            $images[] = PropertyImage::fromArray($imageData);
-        }
-
-        return collect($images);
+        return PropertyImage::fromList($data);
     }
 
     /**

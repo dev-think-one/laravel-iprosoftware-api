@@ -39,13 +39,6 @@ class BookingCalculation extends IproEntity
      */
     public function parsePropertyItems(?array $data): Collection
     {
-        $items = [];
-        if (is_array($data)) {
-            foreach ($data as $datum) {
-                $items[] = PropertyItem::fromArray($datum);
-            }
-        }
-
-        return collect($items);
+        return PropertyItem::fromList($data);
     }
 }

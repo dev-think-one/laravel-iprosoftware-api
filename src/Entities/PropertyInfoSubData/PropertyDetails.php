@@ -175,12 +175,7 @@ class PropertyDetails extends IproEntity
      */
     public function parseImages(array $data): Collection
     {
-        $images = [];
-        foreach ($data as $imageDetailData) {
-            $images[] = PropertyDetailImage::fromArray($imageDetailData);
-        }
-
-        return collect($images);
+        return PropertyDetailImage::fromList($data);
     }
 
     /**

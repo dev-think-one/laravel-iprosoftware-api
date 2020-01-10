@@ -3,7 +3,6 @@
 
 namespace Angecode\LaravelIproSoft\Entities\Property;
 
-
 use Angecode\LaravelIproSoft\Entities\IproEntity;
 use Illuminate\Support\Collection;
 
@@ -31,5 +30,4 @@ class CustomRate extends IproEntity
 
         return $collection;
     }
-
 }
