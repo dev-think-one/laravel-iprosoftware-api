@@ -140,10 +140,10 @@ class PropertyDetails extends IproEntity
     public $seoKeywords;
 
     /** @var null|string */
-    public $seoDescription;
+    public ?string $seoDescription;
 
     /** @var null|PropertyAttributes */
-    public $attributes;
+    public ?PropertyAttributes $attributes;
 
     /** @var null|array */
     public $rooms;
