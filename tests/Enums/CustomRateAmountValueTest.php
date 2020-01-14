@@ -51,6 +51,4 @@ class CustomRateAmountValueTest extends IproSoftwareTestCase
         $this->assertEquals('***', (string)$enum);
         $this->assertEquals(CustomRateAmountValue::thirdSpecialOffer()->getIndex(), $enum->getIndex());
     }
-
-
 }

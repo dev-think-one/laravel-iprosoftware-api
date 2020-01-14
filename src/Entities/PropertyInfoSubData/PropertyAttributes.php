@@ -26,6 +26,4 @@ class PropertyAttributes extends IproEntity
 
     /** @var null|int[] */
     public ?array $maxSleeps = [];
-
-
 }

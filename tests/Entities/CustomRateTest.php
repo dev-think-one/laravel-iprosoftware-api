@@ -3,9 +3,6 @@
 
 namespace Angecode\LaravelIproSoft\Tests\Entities;
 
-
-use Angecode\LaravelIproSoft\Entities\GeneralPropertyInfo;
-use Angecode\LaravelIproSoft\Entities\OwnerInfo;
 use Angecode\LaravelIproSoft\Entities\Property\CustomRate;
 use Angecode\LaravelIproSoft\Entities\Property\CustomRateAmount;
 use Angecode\LaravelIproSoft\Entities\Property\CustomRateAmountGroup;
@@ -64,5 +61,4 @@ class CustomRateTest extends IproSoftwareTestCase
         $this->assertTrue($amount->valueType->isEqual(CustomRateAmountValue::secondSpecialOffer()));
         $this->assertEquals((float)123, $amount->value);
     }
-
 }
