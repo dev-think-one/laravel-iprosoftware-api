@@ -151,7 +151,7 @@ class CustomRateAmountType extends Enum
         return new class() extends CustomRateAmountType {
             public function getValue(): string
             {
-                return '5 nights';
+                return '5_nights';
             }
 
             public function getIndex(): int
