@@ -67,6 +67,8 @@ class Booking extends IproEntity
 
     public ?int $contactID;
 
+    public ?int $propertyId;
+
     public ?string $customerName;
 
     public ?int $adults;
