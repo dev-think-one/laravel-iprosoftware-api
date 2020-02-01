@@ -3,7 +3,6 @@
 
 namespace Angecode\LaravelIproSoft\Entities\Booking;
 
-
 use Angecode\LaravelIproSoft\Entities\IproEntity;
 
 class Guest extends IproEntity

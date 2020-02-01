@@ -3,7 +3,6 @@
 
 namespace Angecode\LaravelIproSoft\Entities\Booking;
 
-
 use Angecode\LaravelIproSoft\Entities\IproEntity;
 
 class HolidayExtrasOrdered extends IproEntity
@@ -17,5 +16,4 @@ class HolidayExtrasOrdered extends IproEntity
     public ?float $extraNetPrice;
 
     public ?float $payableToOwner;
-
 }

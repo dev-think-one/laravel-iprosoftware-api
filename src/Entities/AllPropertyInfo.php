@@ -11,11 +11,11 @@ class AllPropertyInfo extends IproEntity
 {
     public int $propertyId;
 
-    /** @var null|PropertyDetails */
     public ?PropertyDetails $propertyDetails;
 
     public ?array $propertyRates;
 
+    /** @var PropertyImage[]|null */
     public ?Collection $propertyImages;
 
     public ?Collection $propertyAvailabilities;

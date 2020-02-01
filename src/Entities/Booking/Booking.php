@@ -135,5 +135,3 @@ class Booking extends IproEntity
         return HolidayExtrasOrdered::fromList($data);
     }
 }
-
-
