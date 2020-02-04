@@ -16,7 +16,10 @@ class PropertyAttributes extends IproEntity
     public ?array $theme = [];
 
     /** @var null|string[] */
-    public ?array $bedrooms;
+    public ?array $bedrooms = [];
+
+    /** @var null|string[] */
+    public ?array $bathrooms = [];
 
     /** @var null|string[] */
     public ?array $sleeps = [];
