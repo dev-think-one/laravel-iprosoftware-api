@@ -39,6 +39,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static \Psr\Http\Message\ResponseInterface searchBookings($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Bookings
  * @method static \Psr\Http\Message\ResponseInterface calculateBooking($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Calculate-Booking
  * @method static \Psr\Http\Message\ResponseInterface createBooking($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Create-Booking
+ * @method static \Psr\Http\Message\ResponseInterface updateBooking($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Update-Booking
  * @method static \Psr\Http\Message\ResponseInterface getStatementsByOwner($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Statements
  * @method static \Psr\Http\Message\ResponseInterface getReviewsList($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Reviews
  * @method static \Psr\Http\Message\ResponseInterface createReview($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Create-Review
