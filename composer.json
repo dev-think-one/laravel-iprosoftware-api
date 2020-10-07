@@ -24,8 +24,8 @@
     ],
     "require": {
         "php": "^7.4",
-        "illuminate/support": "^6.0",
-        "spatie/data-transfer-object": "^1.12",
+        "illuminate/support": "^6.0|^7.0|^8.0",
+        "spatie/data-transfer-object": "^2.5",
         "spatie/enum": "^2.3",
         "yaroslawww/ipro-software-api-php": "^2.0"
     },
