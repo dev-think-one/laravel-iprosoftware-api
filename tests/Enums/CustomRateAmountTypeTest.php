@@ -14,7 +14,7 @@ class CustomRateAmountTypeTest extends IproSoftwareTestCase
     {
         $enum = CustomRateAmountType::week();
 
-        $this->assertEquals('week', (string)$enum);
+        $this->assertEquals('week', (string) $enum);
         $this->assertEquals(70, $enum->getIndex());
     }
 }

@@ -14,7 +14,7 @@ class CustomRateAmountValueTest extends IproSoftwareTestCase
     {
         $enum = CustomRateAmountValue::usePreviousWeekPricing();
 
-        $this->assertEquals('0', (string)$enum);
+        $this->assertEquals('0', (string) $enum);
         $this->assertEquals(0, $enum->getIndex());
     }
 
@@ -25,7 +25,7 @@ class CustomRateAmountValueTest extends IproSoftwareTestCase
     {
         $enum = CustomRateAmountValue::make(123456);
 
-        $this->assertEquals('1', (string)$enum);
+        $this->assertEquals('1', (string) $enum);
         $this->assertEquals(1, $enum->getIndex());
     }
 
@@ -36,19 +36,17 @@ class CustomRateAmountValueTest extends IproSoftwareTestCase
     {
         $enum = CustomRateAmountValue::make('123456 *');
 
-        $this->assertEquals('*', (string)$enum);
+        $this->assertEquals('*', (string) $enum);
         $this->assertEquals(CustomRateAmountValue::firstSpecialOffer()->getIndex(), $enum->getIndex());
-
 
         $enum = CustomRateAmountValue::make('123456 **');
 
-        $this->assertEquals('**', (string)$enum);
+        $this->assertEquals('**', (string) $enum);
         $this->assertEquals(CustomRateAmountValue::secondSpecialOffer()->getIndex(), $enum->getIndex());
-
 
         $enum = CustomRateAmountValue::make('123456 ***');
 
-        $this->assertEquals('***', (string)$enum);
+        $this->assertEquals('***', (string) $enum);
         $this->assertEquals(CustomRateAmountValue::thirdSpecialOffer()->getIndex(), $enum->getIndex());
     }
 }

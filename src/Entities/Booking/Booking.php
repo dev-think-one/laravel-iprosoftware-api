@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Entities\Booking;
 
 use Angecode\LaravelIproSoft\Entities\IproEntity;
@@ -56,7 +55,7 @@ class Booking extends IproEntity
 
     public ?float $ratePerDay;
 
-    /** @var string[]|null  */
+    /** @var string[]|null */
     public ?array $propertyTypes;
 
     public ?string $status;

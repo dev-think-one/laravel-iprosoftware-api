@@ -14,7 +14,7 @@ class BookingStatusTest extends IproSoftwareTestCase
     {
         $status = BookingStatus::booking();
 
-        $this->assertEquals('Booking', (string)$status);
+        $this->assertEquals('Booking', (string) $status);
         $this->assertEquals(3, $status->getIndex());
     }
 }

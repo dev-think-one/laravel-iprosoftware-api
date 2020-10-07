@@ -14,7 +14,7 @@ class InsuranceBreakageTest extends IproSoftwareTestCase
     {
         $enum = InsuranceBreakage::breakagesDeposit();
 
-        $this->assertEquals('BreakagesDeposit', (string)$enum);
+        $this->assertEquals('BreakagesDeposit', (string) $enum);
         $this->assertEquals(2, $enum->getIndex());
     }
 }

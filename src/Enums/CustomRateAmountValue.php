@@ -13,10 +13,11 @@ class CustomRateAmountValue extends Enum
         $value = trim($value);
         if (is_numeric($value) && $value > 0) {
             $value = '1';
-        } elseif (!is_numeric($value) && Str::endsWith($value, ['*', '**', '***'])) {
+        } elseif (! is_numeric($value) && Str::endsWith($value, ['*', '**', '***'])) {
             preg_match('/^[^\*]+(?<offer>\**)$/', $value, $matches);
             $value = $matches['offer'];
         }
+
         return parent::make($value);
     }
 
@@ -27,7 +28,6 @@ class CustomRateAmountValue extends Enum
             {
                 return '1';
             }
-
 
             public function getIndex(): int
             {
@@ -43,7 +43,6 @@ class CustomRateAmountValue extends Enum
             {
                 return '0';
             }
-
 
             public function getIndex(): int
             {
@@ -89,7 +88,6 @@ class CustomRateAmountValue extends Enum
             {
                 return '*';
             }
-
 
             public function getIndex(): int
             {
