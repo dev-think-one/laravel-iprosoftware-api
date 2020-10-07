@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Entities\Property;
 
 use Angecode\LaravelIproSoft\Entities\IproEntity;
@@ -21,7 +20,7 @@ class CustomRateAmount extends IproEntity
     {
         try {
             $customRateAmount = new self();
-            $customRateAmount->type = CustomRateAmountType::make((int)$stringType);
+            $customRateAmount->type = CustomRateAmountType::make((int) $stringType);
             $customRateAmount->valueType = CustomRateAmountValue::make($stringValue);
             if ($customRateAmount->valueType->isAny([
                 CustomRateAmountValue::priceFrom(),
@@ -29,7 +28,7 @@ class CustomRateAmount extends IproEntity
                 CustomRateAmountValue::secondSpecialOffer(),
                 CustomRateAmountValue::thirdSpecialOffer(),
             ])) {
-                $customRateAmount->value = (float)trim($stringValue, "\* \t\n\r\0\x0B");
+                $customRateAmount->value = (float) trim($stringValue, "\* \t\n\r\0\x0B");
             }
 
             return $customRateAmount;

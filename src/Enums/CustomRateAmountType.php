@@ -52,7 +52,7 @@ class CustomRateAmountType extends Enum
     }
 
     /**
-     * Friday to Sunday
+     * Friday to Sunday.
      * @return CustomRateAmountType
      */
     public static function twoNightWeekend(): CustomRateAmountType
@@ -71,7 +71,7 @@ class CustomRateAmountType extends Enum
     }
 
     /**
-     * Friday to Monday
+     * Friday to Monday.
      * @return CustomRateAmountType
      */
     public static function threeNightWeekend(): CustomRateAmountType
@@ -90,7 +90,7 @@ class CustomRateAmountType extends Enum
     }
 
     /**
-     * Friday to Friday (7 nights)
+     * Friday to Friday (7 nights).
      * @return CustomRateAmountType
      */
     public static function week(): CustomRateAmountType
@@ -109,7 +109,7 @@ class CustomRateAmountType extends Enum
     }
 
     /**
-     * Monday to Friday (4 nights)
+     * Monday to Friday (4 nights).
      * @return CustomRateAmountType
      */
     public static function midweek(): CustomRateAmountType
@@ -143,7 +143,7 @@ class CustomRateAmountType extends Enum
     }
 
     /**
-     * Friday to Wednesday
+     * Friday to Wednesday.
      * @return CustomRateAmountType
      */
     public static function fiveNights(): CustomRateAmountType

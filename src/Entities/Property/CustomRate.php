@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Entities\Property;
 
 use Angecode\LaravelIproSoft\Entities\IproEntity;

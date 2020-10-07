@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Angecode\LaravelIproSoft\Tests\Entities;
 
 use Angecode\LaravelIproSoft\Entities\Property\CustomRate;
@@ -12,7 +11,6 @@ use Angecode\LaravelIproSoft\Tests\IproSoftwareTestCase;
 
 class CustomRateTest extends IproSoftwareTestCase
 {
-
     /**
      * @test
      */
@@ -33,7 +31,7 @@ class CustomRateTest extends IproSoftwareTestCase
                         '70' => -1,
                         '80' => '-2',
                         '9999' => 'not-exists',
-                    ]
+                    ],
                 ],
                 [
                     'WeekCommencing' => '2020-01-07',
@@ -42,9 +40,9 @@ class CustomRateTest extends IproSoftwareTestCase
                         '60' => '123 **',
                         '70' => -1,
                         '80' => '-2',
-                    ]
+                    ],
                 ],
-            ]
+            ],
         ]);
         $this->assertInstanceOf(CustomRate::class, $customRate);
 
@@ -59,6 +57,6 @@ class CustomRateTest extends IproSoftwareTestCase
 
         $this->assertTrue($amount->type->isEqual(CustomRateAmountType::twoNightWeekend()));
         $this->assertTrue($amount->valueType->isEqual(CustomRateAmountValue::secondSpecialOffer()));
-        $this->assertEquals((float)123, $amount->value);
+        $this->assertEquals((float) 123, $amount->value);
     }
 }
