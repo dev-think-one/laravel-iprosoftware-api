@@ -4,220 +4,71 @@ namespace Angecode\LaravelIproSoft\Enums;
 
 use Spatie\Enum\Enum;
 
+/**
+ * @method static self oneNightWeekend()
+ * @method static self oneNightMidweek()
+ * @method static self oneNightMidweekCV()
+ * @method static self twoNightWeekend()
+ * @method static self threeNightWeekend()
+ * @method static self week()
+ * @method static self midweek()
+ * @method static self twoNightMidweek()
+ * @method static self fiveNights()
+ * @method static self twoNightWeekendWV()
+ * @method static self threeNightWeekendWV()
+ * @method static self weekWV()
+ * @method static self midweekWV()
+ */
 class CustomRateAmountType extends Enum
 {
-    public static function oneNightWeekend(): CustomRateAmountType
+    protected static function values(): array
     {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return '1_night_weekend';
-            }
-
-            public function getIndex(): int
-            {
-                return 10;
-            }
-        };
+        return [
+            'oneNightWeekend'     => '1_night_weekend',
+            'oneNightMidweek'     => '1_night_midweek',
+            'oneNightMidweekCV'   => '1_night_midweek_CV',
+            'twoNightWeekend'     => '2_night_weekend',
+            'threeNightWeekend'   => '3_night_weekend',
+            'week'                => 'week',
+            'midweek'             => 'midweek',
+            'twoNightMidweek'     => '2_night_midweek',
+            'fiveNights'          => '5_nights',
+            'twoNightWeekendWV'   => '2_night_weekend_WV',
+            'threeNightWeekendWV' => '3_night_weekend_WV',
+            'weekWV'              => 'week_WV',
+            'midweekWV'           => 'midweek_WV',
+        ];
     }
 
-    public static function oneNightMidweek(): CustomRateAmountType
+    protected static function indexes(): array
     {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return '1_night_midweek';
-            }
-
-            public function getIndex(): int
-            {
-                return 15;
-            }
-        };
+        return [
+            'oneNightWeekend'     => 10,
+            'oneNightMidweek'     => 15,
+            'oneNightMidweekCV'   => 20,
+            'twoNightWeekend'     => 50,
+            'threeNightWeekend'   => 60,
+            'week'                => 70,
+            'midweek'             => 80,
+            'twoNightMidweek'     => 85,
+            'fiveNights'          => 90,
+            'twoNightWeekendWV'   => 100,
+            'threeNightWeekendWV' => 110,
+            'weekWV'              => 120,
+            'midweekWV'           => 130,
+        ];
     }
 
-    public static function oneNightMidweekCV(): CustomRateAmountType
+    public static function make($value): static
     {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return '1_night_midweek_CV';
+        $value = trim($value);
+        if (is_numeric($value) && $value > 0) {
+            $key = array_search($value, self::indexes());
+            if ($key) {
+                return parent::from($key);
             }
+        }
 
-            public function getIndex(): int
-            {
-                return 20;
-            }
-        };
-    }
-
-    /**
-     * Friday to Sunday.
-     * @return CustomRateAmountType
-     */
-    public static function twoNightWeekend(): CustomRateAmountType
-    {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return '2_night_weekend';
-            }
-
-            public function getIndex(): int
-            {
-                return 50;
-            }
-        };
-    }
-
-    /**
-     * Friday to Monday.
-     * @return CustomRateAmountType
-     */
-    public static function threeNightWeekend(): CustomRateAmountType
-    {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return '3_night_weekend';
-            }
-
-            public function getIndex(): int
-            {
-                return 60;
-            }
-        };
-    }
-
-    /**
-     * Friday to Friday (7 nights).
-     * @return CustomRateAmountType
-     */
-    public static function week(): CustomRateAmountType
-    {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return 'week';
-            }
-
-            public function getIndex(): int
-            {
-                return 70;
-            }
-        };
-    }
-
-    /**
-     * Monday to Friday (4 nights).
-     * @return CustomRateAmountType
-     */
-    public static function midweek(): CustomRateAmountType
-    {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return 'midweek';
-            }
-
-            public function getIndex(): int
-            {
-                return 80;
-            }
-        };
-    }
-
-    public static function twoNightMidweek(): CustomRateAmountType
-    {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return '2_night_midweek';
-            }
-
-            public function getIndex(): int
-            {
-                return 85;
-            }
-        };
-    }
-
-    /**
-     * Friday to Wednesday.
-     * @return CustomRateAmountType
-     */
-    public static function fiveNights(): CustomRateAmountType
-    {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return '5_nights';
-            }
-
-            public function getIndex(): int
-            {
-                return 90;
-            }
-        };
-    }
-
-    public static function twoNightWeekendWV(): CustomRateAmountType
-    {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return '2_night_weekend_WV';
-            }
-
-            public function getIndex(): int
-            {
-                return 100;
-            }
-        };
-    }
-
-    public static function threeNightWeekendWV(): CustomRateAmountType
-    {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return '3_night_weekend_WV';
-            }
-
-            public function getIndex(): int
-            {
-                return 110;
-            }
-        };
-    }
-
-    public static function weekWV(): CustomRateAmountType
-    {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return 'week_WV';
-            }
-
-            public function getIndex(): int
-            {
-                return 120;
-            }
-        };
-    }
-
-    public static function midweekWV(): CustomRateAmountType
-    {
-        return new class() extends CustomRateAmountType {
-            public function getValue(): string
-            {
-                return 'midweek_WV';
-            }
-
-            public function getIndex(): int
-            {
-                return 130;
-            }
-        };
+        return parent::from($value);
     }
 }

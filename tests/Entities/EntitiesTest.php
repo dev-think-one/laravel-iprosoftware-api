@@ -18,9 +18,9 @@ class EntitiesTest extends IproSoftwareTestCase
     {
         /** @var GeneralPropertyInfo $property */
         $property = GeneralPropertyInfo::fromArray([
-            'Id' => 111,
+            'Id'    => 111,
             'Owner' => [
-                'ContactId' => 1000,
+                'ContactId'        => 1000,
                 'NotExistProperty' => 'test',
             ],
         ]);
@@ -43,16 +43,16 @@ class EntitiesTest extends IproSoftwareTestCase
         /** @var Collection $properties */
         $properties = GeneralPropertyInfo::fromList([
             [
-                'Id' => 111,
+                'Id'    => 111,
                 'Owner' => [
-                    'ContactId' => 1000,
+                    'ContactId'        => 1000,
                     'NotExistProperty' => 'test',
                 ],
             ],
             [
-                'Id' => 222,
+                'Id'    => 222,
                 'Owner' => [
-                    'ContactId' => 2000,
+                    'ContactId'        => 2000,
                     'NotExistProperty' => 'test2',
                 ],
             ],

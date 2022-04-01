@@ -23,7 +23,7 @@ class PropertyImageTest extends IproSoftwareTestCase
 
         /** @var PropertyImage $propertyImage */
         $propertyImage = PropertyImage::fromArray([
-            'Id' => 222,
+            'Id'           => 222,
             'ModifiedDate' => '20/01/2016 06:08:25',
         ]);
 

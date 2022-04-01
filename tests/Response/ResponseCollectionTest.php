@@ -13,7 +13,7 @@ class ResponseCollectionTest extends IproSoftwareTestCase
     {
         return [
             'TotalHits' => 3,
-            'Items' => [
+            'Items'     => [
                 [
                     'Id' => 1,
                 ],

@@ -24,8 +24,8 @@ class ResponseCollection
         $this->requestData = $requestData;
 
         $responseData = json_decode((string) $response->getBody(), true);
-        $this->total = $responseData['TotalHits'];
-        $this->items = new LazyCollection(function () use ($responseData, $cast) {
+        $this->total  = $responseData['TotalHits'];
+        $this->items  = new LazyCollection(function () use ($responseData, $cast) {
             foreach ($responseData['Items'] as $item) {
                 yield $cast::fromArray($item);
             }

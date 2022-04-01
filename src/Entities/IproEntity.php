@@ -29,8 +29,8 @@ abstract class IproEntity
     {
         $object = new static();
         foreach ($array as $key => $value) {
-            $originalKey = $key;
-            $key = preg_replace('/[^A-Za-z0-9]/', '', $key);
+            $originalKey  = $key;
+            $key          = preg_replace('/[^A-Za-z0-9]/', '', $key);
             $propertyName = $object->getPropertyNameFromKey($key);
             if ($propertyName) {
                 if (method_exists($object, 'parse'.$key)) {
@@ -41,7 +41,7 @@ abstract class IproEntity
             }
         }
 
-        if (! empty($array)) {
+        if (!empty($array)) {
             $object->notParsedData = $array;
         }
 

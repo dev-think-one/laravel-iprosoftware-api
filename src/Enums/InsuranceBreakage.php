@@ -4,50 +4,41 @@ namespace Angecode\LaravelIproSoft\Enums;
 
 use Spatie\Enum\Enum;
 
+/**
+ * @method static self none()
+ * @method static self insurance()
+ * @method static self breakagesDeposit()
+ */
 class InsuranceBreakage extends Enum
 {
-    public static function none(): InsuranceBreakage
+    protected static function values(): array
     {
-        return new class() extends InsuranceBreakage {
-            public function getValue(): string
-            {
-                return 'None';
-            }
-
-            public function getIndex(): int
-            {
-                return 0;
-            }
-        };
+        return [
+            'none'             => 'None',
+            'insurance'        => 'Insurance',
+            'breakagesDeposit' => 'BreakagesDeposit',
+        ];
     }
 
-    public static function insurance(): InsuranceBreakage
+    protected static function indexes(): array
     {
-        return new class() extends InsuranceBreakage {
-            public function getValue(): string
-            {
-                return 'Insurance';
-            }
-
-            public function getIndex(): int
-            {
-                return 1;
-            }
-        };
+        return [
+            'none'             => 0,
+            'insurance'        => 1,
+            'breakagesDeposit' => 2,
+        ];
     }
 
-    public static function breakagesDeposit(): InsuranceBreakage
+    public static function make($value): static
     {
-        return new class() extends InsuranceBreakage {
-            public function getValue(): string
-            {
-                return 'BreakagesDeposit';
+        $value = trim($value);
+        if (is_numeric($value)) {
+            $key = array_search($value, self::indexes());
+            if ($key) {
+                return parent::from($key);
             }
+        }
 
-            public function getIndex(): int
-            {
-                return 2;
-            }
-        };
+        return parent::from($value);
     }
 }

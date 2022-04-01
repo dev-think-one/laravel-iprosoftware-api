@@ -30,7 +30,7 @@ class PropertyAvailability extends IproEntity
      */
     public function getStartAt(): ?Carbon
     {
-        if (! ((bool) $this->startDate)) {
+        if (!((bool) $this->startDate)) {
             return null;
         }
 
@@ -42,7 +42,7 @@ class PropertyAvailability extends IproEntity
      */
     public function getEndAt(): ?Carbon
     {
-        if (! ((bool) $this->endDate)) {
+        if (!((bool) $this->endDate)) {
             return null;
         }
 

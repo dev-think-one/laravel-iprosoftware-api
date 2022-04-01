@@ -19,15 +19,15 @@ class CustomRateAmount extends IproEntity
     public static function fromAmount(string $stringType, string $stringValue): ?CustomRateAmount
     {
         try {
-            $customRateAmount = new self();
-            $customRateAmount->type = CustomRateAmountType::make((int) $stringType);
+            $customRateAmount            = new self();
+            $customRateAmount->type      = CustomRateAmountType::make((int) $stringType);
             $customRateAmount->valueType = CustomRateAmountValue::make($stringValue);
-            if ($customRateAmount->valueType->isAny([
+            if ($customRateAmount->valueType->equals(
                 CustomRateAmountValue::priceFrom(),
                 CustomRateAmountValue::firstSpecialOffer(),
                 CustomRateAmountValue::secondSpecialOffer(),
                 CustomRateAmountValue::thirdSpecialOffer(),
-            ])) {
+            )) {
                 $customRateAmount->value = (float) trim($stringValue, "\* \t\n\r\0\x0B");
             }
 

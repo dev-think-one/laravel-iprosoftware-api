@@ -14,7 +14,7 @@ class GeneralPropertyInfoTest extends IproSoftwareTestCase
     {
         /** @var GeneralPropertyInfo $property */
         $property = GeneralPropertyInfo::fromArray([
-            'Id' => 111,
+            'Id'  => 111,
             'url' => 'http://guest.test.com/blah-lodge/',
         ]);
 
@@ -28,7 +28,7 @@ class GeneralPropertyInfoTest extends IproSoftwareTestCase
     {
         /** @var GeneralPropertyInfo $property */
         $property = GeneralPropertyInfo::fromArray([
-            'Id' => 111,
+            'Id'              => 111,
             'propertyWebsite' => 'http://guest.test.com/blah-lodge2/',
         ]);
 

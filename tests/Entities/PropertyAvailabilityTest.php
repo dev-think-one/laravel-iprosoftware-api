@@ -23,7 +23,7 @@ class PropertyAvailabilityTest extends IproSoftwareTestCase
         /** @var PropertyAvailability $propertyAvailability */
         $propertyAvailability = PropertyAvailability::fromArray([
             'StartDate' => '2019-12-26',
-            'EndDate' => '2019-12-27',
+            'EndDate'   => '2019-12-27',
         ]);
 
         $this->assertInstanceOf(Carbon::class, $propertyAvailability->getStartAt());

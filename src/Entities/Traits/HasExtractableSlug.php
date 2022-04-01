@@ -17,7 +17,7 @@ trait HasExtractableSlug
         }
 
         foreach ($slugProperties as $propName) {
-            preg_match('/([^\/]+)\/?$/', $this->$propName, $matches);
+            preg_match('/([^\/]+)\/?$/', (string) $this->$propName, $matches);
             if (isset($matches[1])) {
                 return $matches[1];
             }

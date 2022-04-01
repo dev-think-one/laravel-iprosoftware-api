@@ -18,24 +18,24 @@ class CustomRateTest extends IproSoftwareTestCase
     {
         /** @var CustomRate $customRate */
         $customRate = CustomRate::fromArray([
-            'Id' => 76995,
-            'Month' => '2020-01',
-            'Notes' => null,
-            'GroupSize' => [],
+            'Id'            => 76995,
+            'Month'         => '2020-01',
+            'Notes'         => null,
+            'GroupSize'     => [],
             'WeekPriceList' => [
                 [
                     'WeekCommencing' => '2020-01-01',
-                    'Amount' => [
-                        '50' => '123 **',
-                        '60' => 123456,
-                        '70' => -1,
-                        '80' => '-2',
+                    'Amount'         => [
+                        '50'   => '123 **',
+                        '60'   => 123456,
+                        '70'   => -1,
+                        '80'   => '-2',
                         '9999' => 'not-exists',
                     ],
                 ],
                 [
                     'WeekCommencing' => '2020-01-07',
-                    'Amount' => [
+                    'Amount'         => [
                         '50' => 5412,
                         '60' => '123 **',
                         '70' => -1,
@@ -55,8 +55,8 @@ class CustomRateTest extends IproSoftwareTestCase
         $amount = $amountGroup->amount->first();
         $this->assertInstanceOf(CustomRateAmount::class, $amount);
 
-        $this->assertTrue($amount->type->isEqual(CustomRateAmountType::twoNightWeekend()));
-        $this->assertTrue($amount->valueType->isEqual(CustomRateAmountValue::secondSpecialOffer()));
+        $this->assertTrue($amount->type->equals(CustomRateAmountType::twoNightWeekend()));
+        $this->assertTrue($amount->valueType->equals(CustomRateAmountValue::secondSpecialOffer()));
         $this->assertEquals((float) 123, $amount->value);
     }
 }

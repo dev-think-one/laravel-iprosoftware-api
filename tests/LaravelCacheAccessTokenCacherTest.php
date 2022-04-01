@@ -14,7 +14,7 @@ class LaravelCacheAccessTokenCacherTest extends IproSoftwareTestCase
      */
     public function flow()
     {
-        $cache = Mockery::mock(Cache::class);
+        $cache       = Mockery::mock(Cache::class);
         $accessToken = new \Angecode\IproSoftware\AccessToken\AccessToken(uniqid(), uniqid(), uniqid());
 
         $cacheManager = new LaravelCacheAccessTokenCacher($cache, 'some_key');
