@@ -5,6 +5,9 @@ namespace Angecode\LaravelIproSoft\Entities\Booking;
 use Angecode\LaravelIproSoft\Entities\IproEntity;
 use Illuminate\Support\Collection;
 
+/**
+ * @deprecated
+ */
 class BookingCalculation extends IproEntity
 {
     /** @example "2020-01-02" */

@@ -8,6 +8,9 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
 use Psr\Http\Message\ResponseInterface;
 
+/**
+ * @deprecated
+ */
 class ResponseCollection
 {
     /** @var PaginatedRequestDTO */

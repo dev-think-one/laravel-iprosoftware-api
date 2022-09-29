@@ -6,6 +6,9 @@ use Angecode\LaravelIproSoft\Entities\IproEntity;
 use Angecode\LaravelIproSoft\Entities\Traits\HasExtractableSlug;
 use Illuminate\Support\Collection;
 
+/**
+ * @deprecated
+ */
 class PropertyDetails extends IproEntity
 {
     use HasExtractableSlug;

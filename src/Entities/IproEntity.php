@@ -5,6 +5,9 @@ namespace Angecode\LaravelIproSoft\Entities;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
+/**
+ * @deprecated
+ */
 abstract class IproEntity
 {
     /** @var array */

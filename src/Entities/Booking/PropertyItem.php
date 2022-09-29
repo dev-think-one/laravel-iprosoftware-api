@@ -4,6 +4,9 @@ namespace Angecode\LaravelIproSoft\Entities\Booking;
 
 use Angecode\LaravelIproSoft\Entities\IproEntity;
 
+/**
+ * @deprecated
+ */
 class PropertyItem extends IproEntity
 {
     public ?int $id;

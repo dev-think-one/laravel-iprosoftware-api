@@ -2,6 +2,9 @@
 
 namespace Angecode\LaravelIproSoft\Entities;
 
+/**
+ * @deprecated
+ */
 class OwnerInfo extends IproEntity
 {
     /** @var int */

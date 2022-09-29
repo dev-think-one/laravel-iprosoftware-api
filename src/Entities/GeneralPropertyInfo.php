@@ -4,6 +4,9 @@ namespace Angecode\LaravelIproSoft\Entities;
 
 use Angecode\LaravelIproSoft\Entities\Traits\HasExtractableSlug;
 
+/**
+ * @deprecated
+ */
 class GeneralPropertyInfo extends IproEntity
 {
     use HasExtractableSlug;

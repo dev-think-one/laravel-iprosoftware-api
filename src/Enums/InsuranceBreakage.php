@@ -5,6 +5,7 @@ namespace Angecode\LaravelIproSoft\Enums;
 use Spatie\Enum\Enum;
 
 /**
+ * @deprecated
  * @method static self none()
  * @method static self insurance()
  * @method static self breakagesDeposit()

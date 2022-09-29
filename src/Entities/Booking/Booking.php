@@ -5,6 +5,9 @@ namespace Angecode\LaravelIproSoft\Entities\Booking;
 use Angecode\LaravelIproSoft\Entities\IproEntity;
 use Illuminate\Support\Collection;
 
+/**
+ * @deprecated
+ */
 class Booking extends IproEntity
 {
     public int $bookingId;

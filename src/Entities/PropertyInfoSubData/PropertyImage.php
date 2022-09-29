@@ -5,6 +5,9 @@ namespace Angecode\LaravelIproSoft\Entities\PropertyInfoSubData;
 use Angecode\LaravelIproSoft\Entities\IproEntity;
 use Carbon\Carbon;
 
+/**
+ * @deprecated
+ */
 class PropertyImage extends IproEntity
 {
     /** @var null|string */

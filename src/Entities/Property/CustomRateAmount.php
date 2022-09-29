@@ -6,6 +6,9 @@ use Angecode\LaravelIproSoft\Entities\IproEntity;
 use Angecode\LaravelIproSoft\Enums\CustomRateAmountType;
 use Angecode\LaravelIproSoft\Enums\CustomRateAmountValue;
 
+/**
+ * @deprecated
+ */
 class CustomRateAmount extends IproEntity
 {
     /** @var CustomRateAmountType */

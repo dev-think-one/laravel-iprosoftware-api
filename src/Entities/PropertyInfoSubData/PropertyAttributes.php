@@ -4,6 +4,9 @@ namespace Angecode\LaravelIproSoft\Entities\PropertyInfoSubData;
 
 use Angecode\LaravelIproSoft\Entities\IproEntity;
 
+/**
+ * @deprecated
+ */
 class PropertyAttributes extends IproEntity
 {
     /** @var null|string[] */

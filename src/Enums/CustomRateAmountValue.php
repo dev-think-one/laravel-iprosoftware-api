@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 use Spatie\Enum\Enum;
 
 /**
+ * @deprecated
  * @method static self priceFrom()
  * @method static self usePreviousWeekPricing()
  * @method static self noPriceForThisWeek()

@@ -2,6 +2,9 @@
 
 namespace Angecode\LaravelIproSoft\Entities\Traits;
 
+/**
+ * @deprecated
+ */
 trait HasExtractableSlug
 {
     public function extractSlug(): ?string

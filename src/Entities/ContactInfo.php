@@ -2,6 +2,9 @@
 
 namespace Angecode\LaravelIproSoft\Entities;
 
+/**
+ * @deprecated
+ */
 class ContactInfo extends IproEntity
 {
     /** @var int */

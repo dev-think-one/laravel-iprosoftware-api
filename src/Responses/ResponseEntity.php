@@ -6,6 +6,9 @@ use Angecode\LaravelIproSoft\Entities\IproEntity;
 use GuzzleHttp\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 
+/**
+ * @deprecated
+ */
 class ResponseEntity
 {
     /** @var int */

@@ -7,6 +7,9 @@ use Angecode\LaravelIproSoft\Entities\PropertyInfoSubData\PropertyDetails;
 use Angecode\LaravelIproSoft\Entities\PropertyInfoSubData\PropertyImage;
 use Illuminate\Support\Collection;
 
+/**
+ * @deprecated
+ */
 class AllPropertyInfo extends IproEntity
 {
     public int $propertyId;

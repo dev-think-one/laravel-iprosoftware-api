@@ -5,6 +5,9 @@ namespace Angecode\LaravelIproSoft\Entities\Property;
 use Angecode\LaravelIproSoft\Entities\IproEntity;
 use Illuminate\Support\Collection;
 
+/**
+ * @deprecated
+ */
 class CustomRate extends IproEntity
 {
     public int $id;

@@ -4,6 +4,9 @@ namespace Angecode\LaravelIproSoft\Entities\Property;
 
 use Angecode\LaravelIproSoft\Entities\IproEntity;
 
+/**
+ * @deprecated
+ */
 class WelcomePack extends IproEntity
 {
     public ?string $wifiCode;
