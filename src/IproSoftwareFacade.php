@@ -29,6 +29,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static \Angecode\LaravelIproSoft\IproApiResponse getPropertyCustomRates($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Property-Custom-Rates
  * @method static \Angecode\LaravelIproSoft\IproApiResponse getPropertyAvailability($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Property-Availabilities
  * @method static \Angecode\LaravelIproSoft\IproApiResponse getPropertyDayAvailability($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Property-Day-Availabilities
+ * @method static \Angecode\LaravelIproSoft\IproApiResponse getPropertyBlockouts($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Property-Blockouts
  * @method static \Angecode\LaravelIproSoft\IproApiResponse getPropertyRooms($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Property-Rooms
  * @method static \Angecode\LaravelIproSoft\IproApiResponse getPropertyDistances($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Property-Distances
  * @method static \Angecode\LaravelIproSoft\IproApiResponse getPropertyAll($options = []) https://github.com/iprosoftware/api-csharp-client/wiki/Property-All

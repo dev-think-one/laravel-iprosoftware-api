@@ -15,11 +15,6 @@
             "email": "yaroslav.georgitsa@gmail.com",
             "role": "Developer",
             "homepage": "https://github.com/yaroslawww"
-        },
-        {
-            "name": "Think Studio",
-            "role": "Maintainer",
-            "homepage": "https://think.studio"
         }
     ],
     "require": {
@@ -27,7 +22,7 @@
         "illuminate/support": "^8.0|^9.0",
         "spatie/data-transfer-object": "^3.7",
         "spatie/enum": "^3.12",
-        "yaroslawww/ipro-software-api-php": "^3.0"
+        "yaroslawww/ipro-software-api-php": "^3.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.6",
