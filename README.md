@@ -21,10 +21,11 @@ composer require yaroslawww/laravel-iprosoftware-api
 ## Usage
 
 You can use `Facade`
-``` php
+```php
+    /** @var \Angecode\LaravelIproSoft\IproApiResponse $response */
     $response = IproSoftware::getBookingRulesList();
 
-    $bookingRules = json_decode((string)$response->getBody());
+    $bookingRules = $response->json();
 ```
 
 ### .env
