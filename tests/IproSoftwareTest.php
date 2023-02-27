@@ -7,8 +7,6 @@ use Angecode\LaravelIproSoft\IproSoftware;
 
 class IproSoftwareTest extends IproSoftwareTestCase
 {
-    use \phpmock\phpunit\PHPMock;
-
     /**
      * @test
      * @throws \Angecode\IproSoftware\Exceptions\IproSoftwareApiException
@@ -16,10 +14,7 @@ class IproSoftwareTest extends IproSoftwareTestCase
      */
     public function constructor()
     {
-        $time = $this->getFunctionMock('Angecode\\LaravelIproSoft\\', 'config');
-        $time->expects($this->atMost(8))->willReturn('');
-        $time = $this->getFunctionMock('Angecode\\LaravelIproSoft\\', 'resolve');
-        $time->expects($this->once())->willReturn('');
+        parent::setUp();
 
         $client = new IproSoftware();
 
