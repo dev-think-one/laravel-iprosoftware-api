@@ -46,15 +46,10 @@ Since you will typically need to overwrite the assets every time the package is 
 
 ## Testing
 
-``` bash
-    ./vendor/bin/phpunit
-    # or
-    composer test
+```shell
+  composer test
 ```
 
-## Security
-If you discover any security related issues, please email yaroslav.georgitsa@gmail.com instead of using the issue tracker.
+## Credits
 
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+- [![Think Studio](https://think.studio.github.io/images/sponsors/packages/logo-think-studio.png)](https://think.studio/)
