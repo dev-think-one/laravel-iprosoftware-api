@@ -1,6 +1,6 @@
 <?php
 
-namespace Angecode\LaravelIproSoft;
+namespace LaravelIproSoftwareApi;
 
 use Carbon\Carbon;
 

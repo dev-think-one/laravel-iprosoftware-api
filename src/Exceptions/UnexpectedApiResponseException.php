@@ -1,8 +1,8 @@
 <?php
 
-namespace Angecode\LaravelIproSoft\Exceptions;
+namespace LaravelIproSoftwareApi\Exceptions;
 
-use Angecode\LaravelIproSoft\IproApiResponse;
+use LaravelIproSoftwareApi\IproApiResponse;
 
 class UnexpectedApiResponseException extends \Exception
 {

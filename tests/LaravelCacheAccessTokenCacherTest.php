@@ -1,21 +1,18 @@
 <?php
 
-namespace Angecode\LaravelIproSoft\Tests;
+namespace LaravelIproSoftwareApi\Tests;
 
-use Angecode\LaravelIproSoft\AccessToken\LaravelCacheAccessTokenCacher;
 use Illuminate\Contracts\Cache\Repository as Cache;
+use LaravelIproSoftwareApi\AccessToken\LaravelCacheAccessTokenCacher;
 use Mockery;
 
-class LaravelCacheAccessTokenCacherTest extends IproSoftwareTestCase
+class LaravelCacheAccessTokenCacherTest extends TestCase
 {
-    /**
-     * @test
-     * @throws \Psr\SimpleCache\InvalidArgumentException
-     */
+    /** @test */
     public function flow()
     {
         $cache       = Mockery::mock(Cache::class);
-        $accessToken = new \Angecode\IproSoftware\AccessToken\AccessToken(uniqid(), uniqid(), uniqid());
+        $accessToken = new \IproSoftwareApi\AccessToken\AccessToken(uniqid(), uniqid(), uniqid());
 
         $cacheManager = new LaravelCacheAccessTokenCacher($cache, 'some_key');
 

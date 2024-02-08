@@ -1,21 +1,19 @@
 <?php
 
-namespace Angecode\LaravelIproSoft\Tests;
+namespace LaravelIproSoftwareApi\Tests;
 
-use Angecode\IproSoftware\IproSoftwareClient;
-use Angecode\LaravelIproSoft\IproSoftware;
+use IproSoftwareApi\IproSoftwareClient;
+use LaravelIproSoftwareApi\IproSoftware;
 
-class IproSoftwareTest extends IproSoftwareTestCase
+class IproSoftwareTest extends TestCase
 {
     /**
      * @test
-     * @throws \Angecode\IproSoftware\Exceptions\IproSoftwareApiException
+     * @throws \IproSoftwareApi\Exceptions\IproSoftwareApiException
      * @throws \Illuminate\Contracts\Container\BindingResolutionException
      */
-    public function constructor()
+    public function constructor_do_not_requires_any_params()
     {
-        parent::setUp();
-
         $client = new IproSoftware();
 
         $this->assertInstanceOf(IproSoftwareClient::class, $client);

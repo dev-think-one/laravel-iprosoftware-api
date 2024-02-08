@@ -1,16 +1,16 @@
 <?php
 
-namespace Angecode\LaravelIproSoft;
+namespace LaravelIproSoftwareApi;
 
-use Angecode\IproSoftware\IproSoftwareClient;
 use Illuminate\Support\Facades\Config;
+use IproSoftwareApi\IproSoftwareClient;
 use Psr\Http\Message\ResponseInterface;
 
 class IproSoftware extends IproSoftwareClient
 {
     /**
      * IproSoftware constructor.
-     * @throws \Angecode\IproSoftware\Exceptions\IproSoftwareApiException
+     * @throws \IproSoftwareApi\Exceptions\IproSoftwareApiException
      * @throws \Illuminate\Contracts\Container\BindingResolutionException
      */
     public function __construct()

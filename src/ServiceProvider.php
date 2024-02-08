@@ -1,10 +1,8 @@
 <?php
 
-namespace Angecode\LaravelIproSoft;
+namespace LaravelIproSoftwareApi;
 
-use Illuminate\Support\ServiceProvider;
-
-class IproSoftwareProvider extends ServiceProvider
+class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
      * Bootstrap the application services.

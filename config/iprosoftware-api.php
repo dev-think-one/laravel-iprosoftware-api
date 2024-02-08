@@ -8,8 +8,8 @@ return [
     'api_oauth_endpoint'   => env('IPROSOFTWARE_API_OAUTH_ENDPOINT', '/oauth/2.0/token'),
     'requests_path_prefix' => env('IPROSOFTWARE_REQUESTS_PATH_PREFIX', 'apis/'),
 
-    'access_token_class'  => \Angecode\IproSoftware\AccessToken\AccessToken::class,
-    'access_token_cacher' => \Angecode\LaravelIproSoft\AccessToken\LaravelCacheAccessTokenCacher::class,
+    'access_token_class'  => \IproSoftwareApi\AccessToken\AccessToken::class,
+    'access_token_cacher' => \LaravelIproSoftwareApi\AccessToken\LaravelCacheAccessTokenCacher::class,
 
     'default_client_conf' => [
         'timeout'     => 100.0,

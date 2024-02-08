@@ -1,15 +1,13 @@
 <?php
 
-namespace Angecode\LaravelIproSoft\Tests;
+namespace LaravelIproSoftwareApi\Tests;
 
-use Angecode\LaravelIproSoft\IproRequestHelper;
 use Carbon\Carbon;
+use LaravelIproSoftwareApi\IproRequestHelper;
 
-class RequestHelperTest extends IproSoftwareTestCase
+class RequestHelperTest extends TestCase
 {
-    /**
-     * @test
-     */
+    /** @test */
     public function modified_header_has_valid_ipro_format(): void
     {
         $time = Carbon::now();

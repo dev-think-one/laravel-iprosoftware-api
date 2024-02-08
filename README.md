@@ -1,28 +1,28 @@
 # Laravel wrapper for IproSoftware Api
 
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://travis-ci.org/yaroslawww/laravel-iprosoftware-api.svg?branch=master)](https://travis-ci.org/yaroslawww/laravel-iprosoftware-api) 
-[![Quality Score](https://img.shields.io/scrutinizer/g/yaroslawww/laravel-iprosoftware-api.svg?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-iprosoftware-api/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/yaroslawww/laravel-iprosoftware-api/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-iprosoftware-api/?branch=master)
-[![PHP Version](https://img.shields.io/travis/php-v/yaroslawww/laravel-iprosoftware-api.svg?style=flat-square)](https://packagist.org/packages/yaroslawww/laravel-iprosoftware-api)
-[![Packagist Version](https://img.shields.io/packagist/v/yaroslawww/laravel-iprosoftware-api.svg)](https://packagist.org/packages/yaroslawww/laravel-iprosoftware-api)
+![Packagist License](https://img.shields.io/packagist/l/think.studio/laravel-iprosoftware-api?color=%234dc71f)
+[![Packagist Version](https://img.shields.io/packagist/v/think.studio/laravel-iprosoftware-api)](https://packagist.org/packages/think.studio/laravel-iprosoftware-api)
+[![Total Downloads](https://img.shields.io/packagist/dt/think.studio/laravel-iprosoftware-api)](https://packagist.org/packages/think.studio/laravel-iprosoftware-api)
+[![Build Status](https://scrutinizer-ci.com/g/dev-think-one/laravel-iprosoftware-api/badges/build.png?b=main)](https://scrutinizer-ci.com/g/dev-think-one/laravel-iprosoftware-api/build-status/main)
+[![Code Coverage](https://scrutinizer-ci.com/g/dev-think-one/laravel-iprosoftware-api/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/dev-think-one/laravel-iprosoftware-api/?branch=main)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/dev-think-one/laravel-iprosoftware-api/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/dev-think-one/laravel-iprosoftware-api/?branch=main)
 
 
-**Note**: This package is an wrapper for [ipro-software-api-php](https://github.com/yaroslawww/ipro-software-api-php). All predefined api methods names you can find [here](https://github.com/yaroslawww/ipro-software-api-php/blob/master/src/Traits/HasApiMethods.php)
+**Note**: This package is an wrapper for [laravel-iprosoftware-api](https://github.com/dev-think-one/laravel-iprosoftware-api). All predefined api methods names you can find [here](https://github.com/dev-think-one/laravel-iprosoftware-api/blob/master/src/Traits/HasApiMethods.php)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require yaroslawww/laravel-iprosoftware-api
+composer require think.studio/laravel-iprosoftware-api
 ```
 
 ## Usage
 
 You can use `Facade`
 ```php
-    /** @var \Angecode\LaravelIproSoft\IproApiResponse $response */
+    /** @var \LaravelIproSoftwareApi\IproApiResponse $response */
     $response = IproSoftware::getBookingRulesList();
 
     $bookingRules = $response->json();
@@ -40,7 +40,7 @@ IPROSOFTWARE_API_HOST="http://myapp.i-pro3.co.uk"
 In order to edit the default configuration for this package you may execute:
 
 ```bash
-php artisan vendor:publish --provider="Angecode\LaravelIproSoft\IproSoftwareProvider" 
+php artisan vendor:publish --provider="LaravelIproSoftwareApi\ServiceProvider" 
 ```
 Since you will typically need to overwrite the assets every time the package is updated, you may use the `--force` flag.
 

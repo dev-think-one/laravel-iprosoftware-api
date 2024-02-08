@@ -1,10 +1,10 @@
 <?php
 
-namespace Angecode\LaravelIproSoft\AccessToken;
+namespace LaravelIproSoftwareApi\AccessToken;
 
-use Angecode\IproSoftware\Contracts\AccessToken;
-use Angecode\IproSoftware\Contracts\AccessTokenCacher;
 use Illuminate\Contracts\Cache\Repository as Cache;
+use IproSoftwareApi\Contracts\AccessToken;
+use IproSoftwareApi\Contracts\AccessTokenCacher;
 
 class LaravelCacheAccessTokenCacher implements AccessTokenCacher
 {
@@ -42,7 +42,7 @@ class LaravelCacheAccessTokenCacher implements AccessTokenCacher
     /**
      * Retrieve an item from the cache by key.
      *
-     * @return \Angecode\IproSoftware\Contracts\AccessToken|null
+     * @return \IproSoftwareApi\Contracts\AccessToken|null
      * @static
      */
     public function get(): ?AccessToken

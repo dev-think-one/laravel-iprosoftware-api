@@ -1,13 +1,13 @@
 <?php
 
-namespace Angecode\LaravelIproSoft\Tests;
+namespace LaravelIproSoftwareApi\Tests;
 
-class IproSoftwareTestCase extends \Orchestra\Testbench\TestCase
+class TestCase extends \Orchestra\Testbench\TestCase
 {
     protected function getPackageProviders($app)
     {
         return [
-            \Angecode\LaravelIproSoft\IproSoftwareProvider::class,
+            \LaravelIproSoftwareApi\ServiceProvider::class,
         ];
     }
 
